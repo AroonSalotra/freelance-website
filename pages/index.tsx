@@ -31,7 +31,7 @@ export default function Home() {
 
       <div className="overflow-hidden h-20 m-auto">
 
-        <ul className="flex flex-col gap-40 justify-center text-3xl overflow-visible transition-all duration-750 text-4xl"
+        <ul className="flex flex-col gap-40 justify-center text-3xl overflow-visible transition-[transform] duration-750 ease-out text-4xl"
           style={{ transform: `translateY(-${index}%)` }}
         >
 
