@@ -20,7 +20,7 @@ const Navbar = () => {
         <nav className="text-2xl">
 
             <GiHamburgerMenu onClick={() => setIsNavActive(!isNavActive)}
-                className="block sm:hidden" />
+                className="absolute right-10 text-4xl sm:hidden" />
 
             <ul className={`${isNavActive ? "flex" : "hidden"} flex-col gap-0 sm:flex sm:flex-row sm:gap-8 justify-end `}>
                 {navList.map(({ body, redirect }) => {
