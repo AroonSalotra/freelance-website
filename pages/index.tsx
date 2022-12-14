@@ -6,17 +6,17 @@ const fontStylistic = Dancing_Script({ subsets: ["latin"] })
 
 export default function Home() {
 
-  const [index, setIndex] = useState(100)
+  const [index, setIndex] = useState(90)
 
   useEffect(() => {
     const interval = setInterval(() => {
       // console.log("time")
-      if (index === 100) {
-        setIndex(index => 0)
+      if (index === 90) {
+        setIndex(index => 45)
       } else if (index === 0) {
-        setIndex(index => -100)
-      } else setIndex(index => 100)
-    }, 1000)
+        setIndex(index => 90)
+      } else setIndex(index => 0)
+    }, 4000)
 
     return () => clearInterval(interval)
   }, [index])
@@ -29,18 +29,23 @@ export default function Home() {
       <p className="text-2xl py-4">With no compromise</p>
 
 
-      <div className="overflow-hidden max-w-screen w-[25rem] m-auto">
+      <div className="overflow-hidden h-20 m-auto">
 
-        <ul className="flex justify-center gap-60 text-3xl overflow-visible transition-all duration-750 text-4xl"
-          style={{ transform: `translateX(${index}%)` }}>
+        <ul className="flex flex-col gap-40 justify-center text-3xl overflow-visible transition-all duration-750 text-4xl"
+          style={{ transform: `translateY(-${index}%)` }}
+        >
 
           <li>Modern</li>
           <li className={fontStylistic.className}>Stylistic</li>
-          <li id="functional">Functional</li>
-          
+          <li id="functional"
+            className="w-fit px-2 mx-auto">
+            Functional</li>
+
         </ul>
 
       </div>
+
+      {/* <h1>{index.toString()}</h1> */}
 
 
     </div>
