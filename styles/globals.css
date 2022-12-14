@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5rem;
+  text-align: center;
+}
+
+
+#functional {
+  font-family: monospace;
+  @apply bg-slate-800 text-cyan-600
 }
