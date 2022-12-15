@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-paint: url("../public/bg-home.png");
+}
+
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -15,7 +19,10 @@ body {
 }
 
 .home {
-  background-image: url("../public/bg-home.png");
+  background-image: var(--bg-paint);
   background-position-y: 32rem;
   background-position: 41rem;
+}
+
+.info {
 }
