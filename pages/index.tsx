@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
 import { Dancing_Script } from "@next/font/google"
+import { BsArrowDownCircle } from "react-icons/bs"
+import Image from "next/image"
+import BGImage from "../public/bg-home.png"
 
 const fontStylistic = Dancing_Script({ subsets: ["latin"] })
 
@@ -23,31 +26,34 @@ export default function Home() {
 
 
   return (
-    <div className="pt-60">
+    <>
+      <div className="pt-60 home">
 
-      <h1 className="text-8xl">Design</h1>
-      <p className="text-2xl py-4">With no compromise</p>
+        <h1 className="text-8xl">Design</h1>
+        <p className="text-2xl py-4">With no compromise</p>
 
 
-      <div className="overflow-hidden h-20 m-auto">
+        <div className="overflow-hidden h-20 m-auto">
 
-        <ul className="flex flex-col gap-40 justify-center text-3xl overflow-visible transition-[transform] duration-750 ease-out text-4xl"
-          style={{ transform: `translateY(-${index}%)` }}
-        >
+          <ul className="flex flex-col gap-40 justify-center text-3xl overflow-visible transition-[transform] duration-750 ease-out text-4xl"
+            style={{ transform: `translateY(-${index}%)` }}>
 
-          <li>Modern</li>
-          <li className={fontStylistic.className}>Stylistic</li>
-          <li id="functional"
-            className="w-fit px-2 mx-auto">
-            Functional</li>
+            <li>Modern</li>
+            <li className={fontStylistic.className}>Stylistic</li>
+            <li id="functional"
+              className="w-fit px-2 mx-auto">
+              Functional</li>
 
-        </ul>
+          </ul>
+
+        </div>
+
+        <button className="text-6xl pt-10 hover:text-cyan-700">
+          <BsArrowDownCircle />
+        </button>
 
       </div>
 
-      {/* <h1>{index.toString()}</h1> */}
-
-
-    </div>
+    </>
   )
 }

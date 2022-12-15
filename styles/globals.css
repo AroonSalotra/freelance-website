@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   max-width: 1200px;
   margin: 0 auto;
@@ -10,8 +9,13 @@ body {
   text-align: center;
 }
 
-
 #functional {
   font-family: monospace;
   @apply bg-slate-800 text-cyan-600
+}
+
+.home {
+  background-image: url("../public/bg-home.png");
+  background-position-y: 32rem;
+  background-position: 41rem;
 }
