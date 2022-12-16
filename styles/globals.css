@@ -7,10 +7,18 @@
 }
 
 body {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0.5rem;
   text-align: center;
+  font-family: sans-serif;
+}
+
+.width-limit {
+  /* max-width: 1200px;
+  margin: 0 auto; */
+
+  @apply max-w-6xl mx-auto
 }
 
 #functional {
@@ -22,6 +30,10 @@ body {
   background-image: var(--bg-paint);
   background-position-y: 32rem;
   background-position: 41rem;
+}
+
+.btn {
+  @apply border-2 border-black w-fit m-auto p-4 rounded-xl text-3xl hover:bg-black hover:text-white
 }
 
 .info {
