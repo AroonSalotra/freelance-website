@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Dancing_Script } from "@next/font/google"
 import { BsArrowDownCircle } from "react-icons/bs"
 import Image from "next/image"
@@ -15,6 +15,39 @@ const fontStylistic = Dancing_Script({ subsets: ["latin"] })
 export default function Home() {
 
   const [index, setIndex] = useState(90)
+  const [isBtnVisible, setIsBtnVisible] = useState<boolean | null>(null)
+  const refWork = useRef<HTMLHeadingElement>(null)
+  const refQuote = useRef<HTMLHeadingElement>(null)
+
+  const handleClick = () => {
+    return refWork.current?.scrollIntoView()
+  }
+
+  useEffect(() => {
+    // console.log("state", isBtnVisible)
+
+    const { current } = refQuote
+
+    const observer = new IntersectionObserver((entries => {
+      const entry = entries[0];
+      // setIsBtnVisible(entry.isIntersecting)
+
+
+      if (isBtnVisible) {
+        observer.unobserve(entry.target)
+      } else {
+        setIsBtnVisible(entry.isIntersecting)
+      }
+
+    }))
+
+    if (current !== null) observer.observe(current)
+
+    return (): any => current ? observer.unobserve(current) : null
+
+
+
+  }, [isBtnVisible])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -32,7 +65,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="pt-60 home">
+      <section className="pt-60 home border-b-8">
 
         <h1 className="text-8xl">Design</h1>
         <p className="text-2xl py-4">With no compromise</p>
@@ -52,7 +85,8 @@ export default function Home() {
 
         </div>
 
-        <button className="text-6xl py-20 hover:text-cyan-700">
+        <button onClick={handleClick}
+          className="text-6xl py-20 hover:text-cyan-700">
           <BsArrowDownCircle />
         </button>
 
@@ -60,14 +94,14 @@ export default function Home() {
 
       <div />
 
-      <section className="flex flex-col gap-20 pb-20 info border-y-8 max-w-6xl mx-auto">
+      <section className="flex flex-col gap-20 pb-20 info border-b-8 container py-60">
 
         <h1 className="text-3xl pt-4">
           <span className="font-semibold">Your</span> website,
           <span className="font-semibold"> your </span>
           way</h1>
 
-        <div className="animate-expand">
+        <div className="animate-fade">
           <ul className="px-0 flex flex-col justify-between text-2xl sm:px-20 sm:flex-row">
             <li className="rounded-sm border-gray-400 p-2 shadow-sm shadow-black">
               Design to your demands <BsFillPencilFill className="m-auto" /></li>
@@ -93,13 +127,14 @@ export default function Home() {
         <h2>Why choose us?</h2>
       </section> */}
 
-      <section className="max-w-6xl mx-auto">
+      <section ref={refWork}
+        className="container">
         <h2 className="text-3xl py-8">Some of our work</h2>
-        <div className="flex flex-col sm:grid grid-cols-2 gap-12">
+        <div className="flex flex-col sm:grid grid-cols-2">
 
           {Work.map(({ title, imgUrl }) => {
             return <div key={title}
-              className="flex flex-col text-left text-2xl">
+              className="flex flex-col text-left text-2xl items-center">
               <h1 className="pl-4 font-semibold">{title}</h1>
               <Image
                 src={imgUrl}
@@ -113,7 +148,7 @@ export default function Home() {
 
       </section>
 
-      <div className="pt-20">
+      <div className={isBtnVisible ? "pt-20 animate-fadeUp" : ""} ref={refQuote}>
         <button className="btn !text-4xl">
           Get a quote
         </button>

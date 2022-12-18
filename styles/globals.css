@@ -6,19 +6,21 @@
   --bg-paint: url("../public/bg-home.png");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
+  padding-bottom: 0;
   text-align: center;
   font-family: sans-serif;
 }
 
-.width-limit {
-  /* max-width: 1200px;
-  margin: 0 auto; */
-
-  @apply max-w-6xl mx-auto
+.container {
+  @apply max-w-7xl mx-auto
 }
 
 #functional {
