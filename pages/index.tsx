@@ -15,22 +15,16 @@ const fontStylistic = Dancing_Script({ subsets: ["latin"] })
 export default function Home() {
 
   const [index, setIndex] = useState(90)
-  // const { ref, inView, entry } = useInView()
-  const { ref: refQuote, inView: observerBtn } = useInView()
-  const { ref: refWork, inView: observerWork } = useInView()
-  const { ref: refTest, inView: observerTest } = useInView()
+
+  const { ref: refQuote, inView: observerBtn } = useInView({ triggerOnce: true })
+  const { ref: refWork, inView: observerWork } = useInView({ triggerOnce: true, threshold: 0.3 })
 
   const handleClick = () => {
     // return refWork.current?.scrollIntoView()
   }
 
   useEffect(() => {
-    console.log(observerWork)
-  }, [observerWork])
-
-  useEffect(() => {
     const interval = setInterval(() => {
-      // console.log("time")
       if (index === 90) {
         setIndex(index => 45)
       } else if (index === 0) {
@@ -40,7 +34,6 @@ export default function Home() {
 
     return () => clearInterval(interval)
   }, [index])
-
 
 
   return (
@@ -74,7 +67,7 @@ export default function Home() {
 
       <div />
 
-      <section className="flex flex-col gap-20 pb-20 info border-b-8 container py-60">
+      <section className="flex flex-col gap-20 pb-20 info border-b-8 container">
 
         <h1 className="text-3xl pt-4">
           <span className="font-semibold">Your</span> website,
@@ -95,22 +88,24 @@ export default function Home() {
       </section>
 
       <section ref={refWork}
-        className={`container ${observerWork ? "animate-fadeUp" : ""}`}>
+        className="container">
         <h2 className="text-3xl py-8">Some of our work</h2>
 
         <div
-          className="flex flex-col sm:grid grid-cols-2">
+          className={`flex flex-col ${observerWork ? "animate-stretch" : "opacity-0"} transition-opacity sm:grid grid-cols-2`}>
 
           {Work.map(({ title, imgUrl }) => {
             return <div key={title}
               className="flex flex-col text-left text-2xl items-center">
               <h1 className="pl-4 font-semibold">{title}</h1>
+
               <Image
                 src={imgUrl}
                 width={512}
                 height={512}
                 alt={`${title} example`}
               />
+
             </div>
           })}
         </div>
@@ -121,12 +116,6 @@ export default function Home() {
         <button className="btn !text-4xl">
           Get a quote
         </button>
-      </div>
-
-      <div className={observerTest ? "animate-fadeUp" : ""} ref={refTest}>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
       </div>
 
     </>

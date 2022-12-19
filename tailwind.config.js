@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
@@ -14,11 +14,15 @@ module.exports = {
         fadeUp: {
           "0%": { opacity: "0", transform: "translateY(4rem)" },
           "100%": { opacity: "100" }
+        },
+        stretch: {
+          "0%": { padding: "7rem" }
         }
       },
       animation: {
         expand: "expand 900ms ease-in",
-        fadeUp: "fadeUp 1000ms ease-out"
+        fadeUp: "fadeUp 1000ms ease-out",
+        stretch: "stretch 600ms ease-out"
       }
     },
   },
