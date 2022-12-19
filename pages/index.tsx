@@ -8,46 +8,25 @@ import { GrUserWorker } from "react-icons/gr"
 import { MdPayment } from "react-icons/md"
 import { BsFillPencilFill } from "react-icons/bs"
 import Work from "../data/work-data.json"
+import { useInView } from "react-intersection-observer"
 
 const fontStylistic = Dancing_Script({ subsets: ["latin"] })
-
 
 export default function Home() {
 
   const [index, setIndex] = useState(90)
-  const [isBtnVisible, setIsBtnVisible] = useState<boolean | null>(null)
-  const refWork = useRef<HTMLHeadingElement>(null)
-  const refQuote = useRef<HTMLHeadingElement>(null)
+  // const { ref, inView, entry } = useInView()
+  const { ref: refQuote, inView: observerBtn } = useInView()
+  const { ref: refWork, inView: observerWork } = useInView()
+  const { ref: refTest, inView: observerTest } = useInView()
 
   const handleClick = () => {
-    return refWork.current?.scrollIntoView()
+    // return refWork.current?.scrollIntoView()
   }
 
   useEffect(() => {
-    // console.log("state", isBtnVisible)
-
-    const { current } = refQuote
-
-    const observer = new IntersectionObserver((entries => {
-      const entry = entries[0];
-      // setIsBtnVisible(entry.isIntersecting)
-
-
-      if (isBtnVisible) {
-        observer.unobserve(entry.target)
-      } else {
-        setIsBtnVisible(entry.isIntersecting)
-      }
-
-    }))
-
-    if (current !== null) observer.observe(current)
-
-    return (): any => current ? observer.unobserve(current) : null
-
-
-
-  }, [isBtnVisible])
+    console.log(observerWork)
+  }, [observerWork])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,6 +40,7 @@ export default function Home() {
 
     return () => clearInterval(interval)
   }, [index])
+
 
 
   return (
@@ -112,25 +92,14 @@ export default function Home() {
           </ul>
         </div>
 
-        {/* <button className="rounded-full border-2 border-black p-2 px-4 text-2xl w-60 m-auto">
-          <Link href={"/work"} />
-          See our work
-        </button> */}
-
-        {/* <button className="btn">
-          Get a quote
-        </button> */}
-
       </section>
 
-      {/* <section>
-        <h2>Why choose us?</h2>
-      </section> */}
-
       <section ref={refWork}
-        className="container">
+        className={`container ${observerWork ? "animate-fadeUp" : ""}`}>
         <h2 className="text-3xl py-8">Some of our work</h2>
-        <div className="flex flex-col sm:grid grid-cols-2">
+
+        <div
+          className="flex flex-col sm:grid grid-cols-2">
 
           {Work.map(({ title, imgUrl }) => {
             return <div key={title}
@@ -148,10 +117,16 @@ export default function Home() {
 
       </section>
 
-      <div className={isBtnVisible ? "pt-20 animate-fadeUp" : ""} ref={refQuote}>
+      <div className={observerBtn ? "py-20 animate-fadeUp" : ""} ref={refQuote}>
         <button className="btn !text-4xl">
           Get a quote
         </button>
+      </div>
+
+      <div className={observerTest ? "animate-fadeUp" : ""} ref={refTest}>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
       </div>
 
     </>
