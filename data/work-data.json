@@ -1,18 +1,22 @@
 [
     {
         "title": "E-Commerce",
+        "body": "Sell your products safely & quickly",
         "imgUrl": "https://i.imgur.com/Rq0qVDn.png"
     },
     {
         "title": "Data Analysis",
+        "body": "",
         "imgUrl": "https://i.imgur.com/5kpGvdC.png"
     },
     {
         "title": "Online Game",
+        "body": "",
         "imgUrl": "https://i.imgur.com/pTeCofg.png"
     },
     {
         "title": "Resources",
+        "body": "",
         "imgUrl": "https://i.imgur.com/A9BRZsG.jpg"
     }
 ]

@@ -17,14 +17,21 @@ module.exports = {
         },
         stretch: {
           "0%": { padding: "7rem" }
+        },
+        fadeSide: {
+          "0%": {transform: "translateX(20rem)"}
         }
       },
       animation: {
         expand: "expand 900ms ease-in",
         fadeUp: "fadeUp 1000ms ease-out",
-        stretch: "stretch 600ms ease-out"
+        stretch: "stretch 600ms ease-out",
+        fadeSide: "fadeSide 800ms ease-out",
       }
     },
+    listStyleType: {
+      square: "square"
+    }
   },
   plugins: [],
 }
