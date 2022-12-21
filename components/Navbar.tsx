@@ -13,7 +13,8 @@ const Navbar = () => {
     const navList: { body: string, redirect: string }[] = [
         { body: "Home", redirect: "/" },
         { body: "Work", redirect: "" },
-        { body: "Contact", redirect: "" }
+        { body: "Contact", redirect: "" },
+        { body: "Quote", redirect: "/quote" },
     ]
 
     return (
