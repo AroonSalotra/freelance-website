@@ -15,6 +15,7 @@ const Navbar = () => {
         { body: "Work", redirect: "" },
         { body: "Contact", redirect: "" },
         { body: "Quote", redirect: "/quote" },
+        { body: "Pricing", redirect: "/pricing" },
     ]
 
     return (

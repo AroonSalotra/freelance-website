@@ -19,6 +19,8 @@ body {
   font-family: sans-serif;
 }
 
+
+
 .container {
   @apply max-w-7xl mx-auto
 }
@@ -35,7 +37,7 @@ body {
 }
 
 .btn {
-  @apply border-2 border-black w-fit m-auto p-4 text-3xl hover:bg-black hover:text-white
+  /* @apply border-2 border-black w-fit m-auto p-4 text-3xl hover: bg-black hover:text-white */
 }
 
 .icon-xl {
@@ -43,8 +45,86 @@ body {
 }
 
 .form-question {
-  @apply bg-slate-200 mx-auto p-4 flex rounded-lg sm:gap-20
+  /* @apply bg-slate-200 mx-auto p-4 flex rounded-lg sm:gap-20 */
+
+  /* font-size: 2rem; */
+  font-weight: bold;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.info {
+input[type=checkbox] {
+  /* transform: scale(3); */
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* background-color: red; */
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid currentColor;
+  border-radius: 0.15em;
+  border-radius: 20%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
 }
+
+input[type=checkbox]::before {
+  content: "";
+  width: 0.65em;
+  /* margin-left: 1px; */
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* box-shadow: inset 1em 1em var(--form-control-color); */
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  background-color: rgb(53, 129, 106);
+}
+
+table {}
+
+th, td {
+  /* height: 2rem; */
+  /* padding: 1rem; */
+
+  @apply h-8 p-4
+}
+
+tr {}
+
+tr:nth-child(even) {
+  /* background-color: red; */
+
+  @apply bg-slate-200
+}
+
+tr:nth-child(odd) {
+  /* @apply bg-gray-100 */
+}
+
+
+tr:hover {
+  @apply bg-slate-100
+}
+
+.table-title {
+  border-image-source: linear-gradient(rgb(163, 85, 40), green);
+  border-image-slice: 1;
+  /* position: absolute; */
+  
+
+
+  @apply border-2 p-1 font-normal
+}
+
+
+.info {}

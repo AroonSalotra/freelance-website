@@ -11,19 +11,38 @@ const Quote = () => {
     return (
         <div>
             {/* <h1>This is the new page!</h1> */}
-            <h1>{price}</h1>
 
-            <form className="flex flex-col"
+            <form className=""
                 action=""
                 onSubmit={handleSubmit}>
 
-                <div className="form-question">
-                    <label htmlFor="qone">Custom Domain?</label>
+                {/* <div className="form-question"> */}
+                <label className="form-question"
+                    htmlFor="qone">
+                    Custom Domain
                     <input type="checkbox" name="" id="qone" />
-                </div>
+                </label>
+
+                <label className="form-question"
+                    htmlFor="qtwo">
+                    SSL Certificate
+                    <input type="checkbox" name="" id="qtwo" />
+                </label>
+
+
+
+
+
+                {/* </div> */}
 
                 {/* <button>Submit</button> */}
             </form>
+
+
+
+            <h2>Estimated Total: {price}</h2>
+
+
         </div>
     );
 }

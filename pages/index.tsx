@@ -10,6 +10,7 @@ import { BsFillPencilFill } from "react-icons/bs"
 import Work from "../data/work-data.json"
 import { useInView } from "react-intersection-observer"
 import { AiFillLock, AiFillClockCircle, AiFillMobile } from "react-icons/ai"
+import TableBlock from "../components/TableBlock"
 
 const fontStylistic = Dancing_Script({ subsets: ["latin"] })
 
@@ -139,11 +140,64 @@ export default function Home() {
       </section>
 
 
-      <button className={observerBtn ? "py-20 animate-fadeUp" : ""} ref={refQuote}>
+      {/* <button className={observerBtn ? "py-20 animate-fadeUp" : ""} ref={refQuote}>
         <Link href={"/quote"} className="btn !text-5xl">
           Get Started
         </Link>
-      </button>
+      </button> */}
+
+      <table className="m-auto text-left">
+        <tbody>
+          <tr className="pointer-events-none">
+            <th />
+            <th>
+              <div className="flex flex-col items-center">
+                {/* <h3 className="table-title">Best Seller</h3> */}
+                <h2>Beginner</h2>
+                <h2 className="font-normal">£6 monthly</h2>
+              </div>
+            </th>
+            <th>
+              <div className="flex flex-col items-center">
+                <h2>Advanced</h2>
+                <h2 className="font-normal">£9 monthly</h2>
+              </div>
+
+            </th>
+            <th>
+              <div className="flex flex-col items-center">
+                <h2>Professional</h2>
+                <h2 className="font-normal">£12 monthly</h2>
+              </div>
+            </th>
+          </tr>
+          <tr>
+            <td>Custom Domain</td>
+            <TableBlock check={true} />
+            <TableBlock check={true} />
+            <TableBlock check={true} />
+          </tr>
+          <tr>
+            <td>SSL Certificate</td>
+            <TableBlock check={true} />
+            <TableBlock check={true} />
+            <TableBlock check={true} />
+
+          </tr>
+          <tr>
+            <td>Maintenence</td>
+            <TableBlock check={false} />
+            <TableBlock check={true} />
+            <TableBlock check={true} />
+          </tr>
+          <tr>
+            <td>24/7 Customer Service</td>
+            <TableBlock check={false} />
+            <TableBlock check={false} />
+            <TableBlock check={true} />
+          </tr>
+        </tbody>
+      </table>
 
     </>
   )
