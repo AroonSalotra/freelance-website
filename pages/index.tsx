@@ -20,6 +20,7 @@ export default function Home() {
 
   const { ref: refQuote, inView: observerBtn } = useInView({ triggerOnce: false })
   const { ref: refWork, inView: observerWork } = useInView({ triggerOnce: false })
+  const { ref: refPrice, inView: observerPrice } = useInView({ triggerOnce: false })
 
   const handleClick = () => {
     // return refWork.current?.scrollIntoView()
@@ -146,60 +147,64 @@ export default function Home() {
         </Link>
       </button> */}
 
-      <table className="table-mobile sm:m-auto sm:justify-center text-left">
-        <tbody>
-          <tr className="pointer-events-none">
-            <th />
-            <th>
-              <div className="flex flex-col items-center">
-                {/* <h3 className="table-title">Best Seller</h3> */}
-                <h2>Beginner</h2>
-                <h2 className="font-normal">£6 monthly</h2>
-              </div>
-            </th>
-            <th>
-              <div className="flex flex-col items-center">
-                <h2>Advanced</h2>
-                <h2 className="font-normal">£9 monthly</h2>
-              </div>
+      <section>
+        {/* <h2>Our plans</h2> */}
 
-            </th>
-            <th>
-              <div className="flex flex-col items-center">
-                <h2>Professional</h2>
-                <h2 className="font-normal">£12 monthly</h2>
-              </div>
-            </th>
-          </tr>
+        <table className="table-mobile sm:m-auto sm:justify-center text-left" ref={refPrice}>
+          <tbody className={`border-2 p-1 rounded-lg rounded-b-none shadow-md shadow-black transition-all overflow-hidden
+          ${observerPrice ? "animate-expand" : ""}`} >
+            <tr className="pointer-events-none">
+              <th />
+              <th>
+                <div className="flex flex-col items-center">
+                  <h2 className="text-2xl">Beginner</h2>
+                  <h2 className="font-normal">£6 monthly</h2>
+                </div>
+              </th>
+              <th>
+                <div className="flex flex-col items-center">
+                  <h2 className="text-2xl">Advanced</h2>
+                  <h2 className="font-normal">£9 monthly</h2>
+                </div>
 
-          <tr>
-            <td>Custom Domain</td>
-            <TableBlock check={true} />
-            <TableBlock check={true} />
-            <TableBlock check={true} />
-          </tr>
-          <tr>
-            <td>SSL Certificate</td>
-            <TableBlock check={true} />
-            <TableBlock check={true} />
-            <TableBlock check={true} />
+              </th>
+              <th>
+                <div className="flex flex-col items-center">
+                  <h2 className="text-2xl">Professional</h2>
+                  <h2 className="font-normal">£12 monthly</h2>
+                </div>
+              </th>
+            </tr>
 
-          </tr>
-          <tr>
-            <td>Maintenence</td>
-            <TableBlock check={false} />
-            <TableBlock check={true} />
-            <TableBlock check={true} />
-          </tr>
-          <tr>
-            <td>24/7 Customer Service</td>
-            <TableBlock check={false} />
-            <TableBlock check={false} />
-            <TableBlock check={true} />
-          </tr>
+            <tr>
+              <td>Custom Domain</td>
+              <TableBlock check={true} />
+              <TableBlock check={true} />
+              <TableBlock check={true} />
+            </tr>
+            <tr>
+              <td>SSL Certificate</td>
+              <TableBlock check={true} />
+              <TableBlock check={true} />
+              <TableBlock check={true} />
 
-        </tbody>
-      </table>
+            </tr>
+            <tr>
+              <td>Maintenence</td>
+              <TableBlock check={false} />
+              <TableBlock check={true} />
+              <TableBlock check={true} />
+            </tr>
+            <tr>
+              <td>24/7 Customer Service</td>
+              <TableBlock check={false} />
+              <TableBlock check={false} />
+              <TableBlock check={true} />
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
 
     </>
   )

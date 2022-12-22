@@ -7,7 +7,7 @@ type TProps = {
 const TableBlock = ({ check }: TProps) => {
     return (
         <td>
-            <div className="pl-[30%]">
+            <div className="pl-[45%]">
                 {check ? <BsCheckCircleFill className="text-slate-700 text-2xl" /> : null}
             </div>
         </td>
