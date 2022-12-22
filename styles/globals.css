@@ -117,12 +117,7 @@ tr:hover {
   @apply bg-slate-100
 }
 
-.table-title {
-  /* border-image-source: linear-gradient(rgb(163, 85, 40), green);
-  border-image-slice: 1; */
-  /* position: absolute; */
-  /* @apply border-2 p-1 font-normal */
+tr:hover td {
+  /* font-size: 2rem; */
+  @apply sm:text-[20px] font-semibold
 }
-
-
-.info {}

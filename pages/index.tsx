@@ -43,6 +43,7 @@ export default function Home() {
   }, [index])
 
 
+
   return (
     <>
       <section className="pt-60 home border-b-8">
@@ -140,15 +141,8 @@ export default function Home() {
 
       </section>
 
-
-      {/* <button className={observerBtn ? "py-20 animate-fadeUp" : ""} ref={refQuote}>
-        <Link href={"/quote"} className="btn !text-5xl">
-          Get Started
-        </Link>
-      </button> */}
-
       <section className="pb-20">
-        <h2 className="text-2xl pb-10 border-t-8 pt-8">Select the best plan for you</h2>
+        <h2 className="text-4xl pb-10 border-t-8 pt-8 font-semibold">Our plans</h2>
 
         <table className="table-mobile sm:m-auto sm:justify-center text-left" ref={refPrice}>
           <tbody className={`border-2 p-1 rounded-lg rounded-b-none shadow-md shadow-black transition-all overflow-y-hidden
@@ -161,47 +155,50 @@ export default function Home() {
                   ${observerPrice ? "animate-fade" : ""}`}>
                     Most Popular</h2>
                   <h2 className="text-2xl">Beginner</h2>
-                  <h2 className="font-normal">£<span className="text-2xl">6</span> monthly</h2>
+                  <h2 className="font-normal">£
+                    <span className="text-2xl">6 </span>
+                    monthly</h2>
                 </div>
               </th>
               <th>
                 <div className="flex flex-col items-center">
                   <h2 className="text-2xl">Advanced</h2>
-                  <h2 className="font-normal">£<span className="text-2xl">9</span> monthly</h2>
-
+                  <h2 className="font-normal">£
+                    <span className="text-2xl">9 </span>
+                    monthly</h2>
                 </div>
-
               </th>
               <th>
                 <div className="flex flex-col items-center">
                   <h2 className="text-2xl">Professional</h2>
-                  <h2 className="font-normal">£<span className="text-2xl">12</span> monthly</h2>
-
+                  <h2 className="font-normal">£
+                    <span className="text-2xl">12 </span>
+                    monthly</h2>
                 </div>
               </th>
             </tr>
 
             <tr>
-              <td>Custom Domain</td>
+              <td className="transition-[font]">Custom Domain</td>
               <TableBlock check={true} />
               <TableBlock check={true} />
               <TableBlock check={true} />
             </tr>
             <tr>
-              <td>SSL Certificate</td>
+              <td className="transition-[font]">SSL Certificate</td>
               <TableBlock check={true} />
               <TableBlock check={true} />
               <TableBlock check={true} />
 
             </tr>
             <tr>
-              <td>Maintenence</td>
+              <td className="transition-[font]">Maintenence</td>
               <TableBlock check={false} />
               <TableBlock check={true} />
               <TableBlock check={true} />
             </tr>
             <tr>
-              <td>24/7 Customer Service</td>
+              <td className="transition-[font]">24/7 Customer Service</td>
               <TableBlock check={false} />
               <TableBlock check={false} />
               <TableBlock check={true} />
