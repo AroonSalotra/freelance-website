@@ -147,31 +147,36 @@ export default function Home() {
         </Link>
       </button> */}
 
-      <section>
-        {/* <h2>Our plans</h2> */}
+      <section className="pb-20">
+        <h2 className="text-2xl pb-10 border-t-8 pt-8">Select the best plan for you</h2>
 
         <table className="table-mobile sm:m-auto sm:justify-center text-left" ref={refPrice}>
-          <tbody className={`border-2 p-1 rounded-lg rounded-b-none shadow-md shadow-black transition-all overflow-hidden
+          <tbody className={`border-2 p-1 rounded-lg rounded-b-none shadow-md shadow-black transition-all overflow-y-hidden
           ${observerPrice ? "animate-expand" : ""}`} >
             <tr className="pointer-events-none">
               <th />
               <th>
                 <div className="flex flex-col items-center">
+                  <h2 className={`font-normal bg-slate-200 p-1 px-2 sm:absolute sm:translate-y-[-2rem]
+                  ${observerPrice ? "animate-fade" : ""}`}>
+                    Most Popular</h2>
                   <h2 className="text-2xl">Beginner</h2>
-                  <h2 className="font-normal">£6 monthly</h2>
+                  <h2 className="font-normal">£<span className="text-2xl">6</span> monthly</h2>
                 </div>
               </th>
               <th>
                 <div className="flex flex-col items-center">
                   <h2 className="text-2xl">Advanced</h2>
-                  <h2 className="font-normal">£9 monthly</h2>
+                  <h2 className="font-normal">£<span className="text-2xl">9</span> monthly</h2>
+
                 </div>
 
               </th>
               <th>
                 <div className="flex flex-col items-center">
                   <h2 className="text-2xl">Professional</h2>
-                  <h2 className="font-normal">£12 monthly</h2>
+                  <h2 className="font-normal">£<span className="text-2xl">12</span> monthly</h2>
+
                 </div>
               </th>
             </tr>

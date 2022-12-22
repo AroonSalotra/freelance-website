@@ -98,18 +98,19 @@ input[type="checkbox"]:checked::before {
 table {}
 
 th, td {
-  @apply h-8 sm:w-60 p-4
+  @apply h-8 sm:w-[21.5rem] p-4
 }
 
 td {
 }
 
 tr:nth-child(even) {
-  @apply bg-slate-200
+  @apply bg-stone-200
 }
 
 tr:nth-child(odd) {
-  /* @apply bg-gray-100 */
+  @apply bg-stone-100
+
 }
 
 tr:hover {

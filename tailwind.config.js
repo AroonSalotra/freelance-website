@@ -19,8 +19,13 @@ module.exports = {
           "0%": { padding: "7rem" }
         },
         fadeSide: {
-          "0%": {transform: "translateX(20rem)"}
+          "0%": { transform: "translateX(20rem)" }
         },
+        fade: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 100 },
+        }
+
 
       },
       animation: {
@@ -28,6 +33,7 @@ module.exports = {
         fadeUp: "fadeUp 1000ms ease-out",
         stretch: "stretch 600ms ease-out",
         fadeSide: "fadeSide 800ms ease-out",
+        fade: "fade 1000ms ease-out"
       }
     },
     listStyleType: {
