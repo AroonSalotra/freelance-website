@@ -90,6 +90,10 @@ input[type="checkbox"]:checked::before {
   background-color: rgb(53, 129, 106);
 }
 
+.table-mobile {
+  @apply flex justify-start w-full overflow-auto
+}
+
 table {}
 
 th, td {
@@ -99,7 +103,9 @@ th, td {
   @apply h-8 p-4
 }
 
-tr {}
+td {
+  /* @apply w-2 */
+}
 
 tr:nth-child(even) {
   /* background-color: red; */
@@ -117,10 +123,10 @@ tr:hover {
 }
 
 .table-title {
-  border-image-source: linear-gradient(rgb(163, 85, 40), green);
-  border-image-slice: 1;
+  /* border-image-source: linear-gradient(rgb(163, 85, 40), green);
+  border-image-slice: 1; */
   /* position: absolute; */
-  
+
 
 
   @apply border-2 p-1 font-normal

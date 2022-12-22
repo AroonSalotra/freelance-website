@@ -146,7 +146,7 @@ export default function Home() {
         </Link>
       </button> */}
 
-      <table className="m-auto text-left">
+      <table className="table-mobile sm:m-auto sm:justify-center text-left">
         <tbody>
           <tr className="pointer-events-none">
             <th />
@@ -171,6 +171,7 @@ export default function Home() {
               </div>
             </th>
           </tr>
+
           <tr>
             <td>Custom Domain</td>
             <TableBlock check={true} />
@@ -196,6 +197,7 @@ export default function Home() {
             <TableBlock check={false} />
             <TableBlock check={true} />
           </tr>
+
         </tbody>
       </table>
 
