@@ -94,41 +94,61 @@ export default function Home() {
 
       </section> */}
 
-      <section className="animate-stretch bg-gray-100 border-b-8 py-20">
-        <h1 className="text-7xl font-serif pb-10">Start your business today</h1>
-        <dl className="max-w-3xl m-auto text-left text-2xl">
-          <dt>TITLE</dt>
-          <dd className="p-4">Quick and seamless integration of your idea to the final product.</dd>
-          <dt>TITLE</dt>
-          <dd className="p-4">24/7 email customer support system.</dd>
-          <dt>TITLE</dt>
-          <dd className="p-4">Amet nisl purus in mollis nunc sed id semper risus. Magnis dis parturient montes nascetur ridiculus mus mauris vitae. Suspendisse faucibus interdum posuere lorem.</dd>
+      <section className="animate-stretch border-b-8 py-20 bg-slate-100">
+        <h2 className="text-5xl title">Grow your business today</h2>
+        <dl className="flex flex-col sm:flex-row justify-center gap-4 items-center pt-12">
+
+          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+            <dt className="text-[20px]">Unique Design</dt>
+            <dd>Direct communication for your design.</dd>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+            <dt className="text-[20px]">Always Online</dt>
+            <dd>24/7 email customer support system.</dd>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+            <dt className="text-[20px]">No Limits</dt>
+            <dd>From eCommerce to Online Games.</dd>
+          </div>
         </dl>
       </section>
 
-      <section ref={refWork}
-        className={`flex flex-col lg:flex-row justify-center items-stretch rounded-lg px-4 py-40 
-        ${observerWork ? "animate-fadeSide" : "opacity-0"}`}>
+      {/* <section ref={refWork}
+        className={`flex flex-col lg:flex-row justify-center items-stretch rounded-lg px-4
+        ${observerWork ? "animate-fadeSide" : "opacity-0"}`}> */}
 
-        <div className="border-l-8 border-black p-12 lg:w-fit text-3xl">
-          {/* <h2 className="font-semibold">Create with no limits</h2> */}
+      <section id="work"
+        className="max-w-8xl mx-auto" >
 
-          <ul className="list-square flex text-left flex-col gap-4 lg:pt-[60%]">
-            <li>Search optimisation</li>
-            <li>Mobile friendly</li>
-            <li>Secure connection</li>
-          </ul>
+        <h2 className="text-5xl pt-20 title">Some of our work</h2>
+
+        <div className="flex flex-col-reverse items-center justify-center pt-20 lg:flex-row lg:items-start">
+
+          <Image
+            src={Work[0].imgUrl}
+            width={1450}
+            height={1450}
+            alt={`${Work[0].title} example`}
+          />
+
+          <dl className="pl-6 pt-4 text-left h-fit bg-slate-200">
+            <dt className="work-title">What you get</dt>
+            <dd className="pl-6 text-2xl py-4">Vast icon library</dd>
+            <dd className="pl-6 text-2xl py-4">API Integration</dd>
+            <dd className="pl-6 text-2xl py-4">Beautiful animation transitions</dd>
+          </dl>
         </div>
 
+        <div className="flex flex-col justify-center sm:flex-row">
 
-        <div className="flex flex-col transition-opacity sm:grid grid-cols-2">
+          {Work.map(({ title, imgUrl, body }, index) => {
 
-          {Work.map(({ title, imgUrl, body }) => {
-            return <div key={title}
-              className="flex flex-col text-left text-2xl items-center">
-              <h1 className="pl-4 font-semibold">{title}</h1>
+            if (index !== 0) return <div key={title}>
 
               <Image
+                className="w-screen sm:w-fit"
                 src={imgUrl}
                 width={512}
                 height={512}
@@ -137,14 +157,17 @@ export default function Home() {
 
             </div>
           })}
+
         </div>
 
       </section>
 
-      <section className="pb-20">
-        <h2 className="text-4xl pb-10 border-t-8 pt-8 font-semibold">Our plans</h2>
+      {/* </section> */}
 
-        <table className="table-mobile sm:m-auto sm:justify-center text-left" ref={refPrice}>
+      <section className="py-20">
+        <h2 className="title text-5xl">Pricing</h2>
+
+        <table className="table-mobile sm:m-auto sm:justify-center text-left pt-20" ref={refPrice}>
           <tbody className={`border-2 p-1 rounded-lg rounded-b-none shadow-md shadow-black transition-all overflow-y-hidden
           ${observerPrice ? "animate-expand" : ""}`} >
             <tr className="pointer-events-none">

@@ -8,9 +8,10 @@ type TProps = {
 const TableBlock = ({ check }: TProps) => {
     return (
         <td>
-            <div className="pl-[45%]">
-                {check ? <AiOutlineCheck className="text-slate-900 text-2xl" /> : null}
-            </div>
+            {check ?
+                <div className="pl-[45%]">
+                    <AiOutlineCheck className="text-slate-900 text-2xl" />
+                </div> : null}
         </td>
     );
 }

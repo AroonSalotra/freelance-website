@@ -20,6 +20,10 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.title {
+  @apply w-fit mx-auto border-b-2 border-black
+}
+
 
 
 .container {
@@ -97,12 +101,19 @@ input[type="checkbox"]:checked::before {
 
 table {}
 
+
 th, td {
-  @apply h-8 sm:w-[21.5rem] p-4
+  height: 4rem;
+  width: 21.5rem;
+  padding: 4;
 }
 
-td {
+tr:hover td {
+  font-size: 20px;
+  font-weight: 400;
 }
+
+td {}
 
 tr:nth-child(even) {
   @apply bg-stone-200
@@ -110,14 +121,12 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
   @apply bg-stone-100
-
 }
 
 tr:hover {
   @apply bg-slate-100
 }
 
-tr:hover td {
-  /* font-size: 2rem; */
-  @apply sm:text-[20px] font-semibold
+.work-title {
+  @apply text-4xl xl:text-7xl font-bold 
 }
