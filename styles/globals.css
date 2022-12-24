@@ -27,8 +27,7 @@ body {
   @apply w-fit mx-auto border-b-2 border-black
 }
 
-#pricing {
-}
+#pricing {}
 
 
 .container {
@@ -64,6 +63,17 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+
+input[type=radio] {
+  display: none;
+}
+
+
+input[type=radio]:checked+label {
+  @apply bg-black text-blue-600
+}
+
 
 input[type=checkbox] {
   /* transform: scale(3); */

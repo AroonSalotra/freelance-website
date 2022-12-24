@@ -2,47 +2,72 @@ import React, { useState } from "react";
 
 
 const Quote = () => {
-    const [price, setPrice] = useState<number>(0)
+    const [total, setTotal] = useState<number>(0)
+    const [websiteOption, setWebsiteOption] = useState<undefined | string>()
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+    const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+        const target = e.target as HTMLInputElement
+        setWebsiteOption(target.value)
     }
+
 
     return (
         <div>
-            {/* <h1>This is the new page!</h1> */}
 
-            <form className=""
-                action=""
-                onSubmit={handleSubmit}>
+            <form action="">
+                <fieldset>
 
-                {/* <div className="form-question"> */}
-                <label className="form-question"
-                    htmlFor="qone">
-                    Custom Domain
-                    <input type="checkbox" name="" id="qone" />
-                </label>
+                    <legend>Website Type</legend>
 
-                <label className="form-question"
-                    htmlFor="qtwo">
-                    SSL Certificate
-                    <input type="checkbox" name="" id="qtwo" />
-                </label>
+                    <input
+                        type="radio"
+                        name="type"
+                        id="commerce"
+                        value="commerce"
+                        onChange={handleChange}
+                    />
+
+                    <label
+                        className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
+                        htmlFor="commerce">
+                        E-Commerce</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="resource"
+                        value="resource"
+                        onChange={handleChange}
+
+                    />
+
+                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
+                        htmlFor="resource">
+                        Resource</label>
+
+                    <input
+                        type="radio"
+                        name="type"
+                        id="game"
+                        value="game"
+                        onChange={handleChange}
+
+                    />
+
+                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
+                        htmlFor="game">
+                        Online Game</label>
 
 
 
+                </fieldset>
 
-
-                {/* </div> */}
-
-                {/* <button>Submit</button> */}
             </form>
 
 
 
-            <h2>Estimated Total: {price}</h2>
-
-
+            <h2>{total}</h2>
+            <h2 className="capitalize">{websiteOption}</h2>
         </div>
     );
 }

@@ -75,7 +75,7 @@ export default function Home() {
 
       </section>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 sm:px-40 sm:rounded-full shadow-lg">
+      <div className="flex flex-col sm:flex-row justify-center gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 md:px-40 md:rounded-full shadow-lg">
         <h2 className="text-5xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 sm:pr-20">
           How it works</h2>
         <ol className="text-left flex flex-col gap-4">
