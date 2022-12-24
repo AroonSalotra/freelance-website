@@ -20,7 +20,7 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   /* background-color: black; */
 
-  @apply bg-slate-200 bg-white
+  /* @apply bg-slate-200 bg-white */
 }
 
 .title {

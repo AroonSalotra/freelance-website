@@ -76,13 +76,13 @@ export default function Home() {
       </section>
 
       <div className="flex flex-col sm:flex-row justify-center gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 sm:px-40 sm:rounded-full shadow-lg">
-        <h2 className="text-4xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 sm:pr-20">
+        <h2 className="text-5xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 sm:pr-20">
           How it works</h2>
         <ol className="text-left flex flex-col gap-4">
-          <li>Select one of our available plans</li>
-          <li>Tell us what you want</li>
-          <li>Receive updates on the progress of your website</li>
-          <li>Let us do the rest</li>
+          <li className="text-[1.5rem]">Select one of our available plans</li>
+          <li className="text-[1.5rem]">Tell us what you want</li>
+          <li className="text-[1.5rem]">Receive updates on the progress of your website</li>
+          <li className="text-[1.5rem]">Let us do the rest</li>
         </ol>
       </div>
 
@@ -129,7 +129,7 @@ export default function Home() {
 
         </div>
 
-        <div className="hidden md:block absolute translate-y-[-55rem] w-screen h-[65rem] bg-slate-200 skew-y-1 z-[-1] border-t-[1rem] border-slate-400 animate-expandWidth border-double" />
+        <div className="hidden md:block absolute translate-y-[-55rem] w-screen h-[65rem] bg-slate-200 skew-y-1 z-[-1] border-t-[1rem] border-b-2 border-slate-400 animate-expandWidth border-double" />
 
       </section>
 
@@ -139,17 +139,17 @@ export default function Home() {
         <h2 className="text-5xl title">Grow your business today</h2>
         <dl className="flex flex-col sm:flex-row justify-center gap-4 items-center pt-12">
 
-          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+          <div className="bg-white rounded-lg p-4 w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
             <dt className="text-[20px]">Unique Design</dt>
             <dd>Direct communication for your design.</dd>
           </div>
 
-          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+          <div className="bg-white rounded-lg p-4 w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
             <dt className="text-[20px]">Always Online</dt>
             <dd>24/7 email customer support system.</dd>
           </div>
 
-          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+          <div className="bg-white rounded-lg p-4 w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
             <dt className="text-[20px]">No Limits</dt>
             <dd>From eCommerce to Online Games.</dd>
           </div>
