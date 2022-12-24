@@ -24,6 +24,9 @@ module.exports = {
         fade: {
           "0%": { opacity: 0 },
           "100%": { opacity: 100 },
+        },
+        expandWidth: {
+          "0%": {width: "0vw"}
         }
 
 
@@ -33,7 +36,8 @@ module.exports = {
         fadeUp: "fadeUp 1000ms ease-out",
         stretch: "stretch 600ms ease-out",
         fadeSide: "fadeSide 800ms ease-out",
-        fade: "fade 1000ms ease-out"
+        fade: "fade 1000ms ease-out",
+        expandWidth: "expandWidth 1200ms ease-out"
       }
     },
     listStyleType: {

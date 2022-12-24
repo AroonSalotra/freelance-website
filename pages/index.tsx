@@ -46,7 +46,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="pt-60 home border-b-8">
+
+
+      <section className="pt-60 home border-b-8 bg-white">
 
         <h1 className="text-8xl">Design</h1>
         <p className="text-2xl py-4">With no compromise</p>
@@ -73,68 +75,35 @@ export default function Home() {
 
       </section>
 
-      <div />
+      <div className="flex flex-col sm:flex-row justify-center gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 sm:px-40 sm:rounded-full shadow-lg">
+        <h2 className="text-4xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 sm:pr-20">
+          How it works</h2>
+        <ol className="text-left flex flex-col gap-4">
+          <li>Select one of our available plans</li>
+          <li>Tell us what you want</li>
+          <li>Receive updates on the progress of your website</li>
+          <li>Let us do the rest</li>
+        </ol>
+      </div>
 
-      {/* <section className="flex flex-col gap-20 pb-20 info border-b-8 container animate-fadeUp">
 
-        <h1 className="text-3xl pt-12">
-          <span className="font-semibold">Your</span> website,
-          <span className="font-semibold"> your </span> way</h1>
-
-        <div className="animate-fade">
-          <ul className="px-0 flex flex-col justify-between text-2xl sm:px-20 sm:flex-row">
-            <li className="rounded-sm border-gray-400 p-2 shadow-sm shadow-black">
-              Design to your demands <BsFillPencilFill className="m-auto" /></li>
-            <li className="rounded-sm border-gray-400 p-2 shadow-sm shadow-black">
-              Mobile responsive <GrUserWorker className="m-auto" /></li>
-            <li className="rounded-sm border-gray-400 p-2 shadow-sm shadow-black">
-              Payment upon completion <MdPayment className="m-auto" /></li>
-          </ul>
-        </div>
-
-      </section> */}
-
-      <section className="animate-stretch border-b-8 py-20 bg-slate-100">
-        <h2 className="text-5xl title">Grow your business today</h2>
-        <dl className="flex flex-col sm:flex-row justify-center gap-4 items-center pt-12">
-
-          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
-            <dt className="text-[20px]">Unique Design</dt>
-            <dd>Direct communication for your design.</dd>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
-            <dt className="text-[20px]">Always Online</dt>
-            <dd>24/7 email customer support system.</dd>
-          </div>
-
-          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
-            <dt className="text-[20px]">No Limits</dt>
-            <dd>From eCommerce to Online Games.</dd>
-          </div>
-        </dl>
-      </section>
-
-      {/* <section ref={refWork}
-        className={`flex flex-col lg:flex-row justify-center items-stretch rounded-lg px-4
-        ${observerWork ? "animate-fadeSide" : "opacity-0"}`}> */}
 
       <section id="work"
         className="max-w-8xl mx-auto" >
 
-        <h2 className="text-5xl pt-20 title">Some of our work</h2>
+        {/* <h2 className="text-5xl pt-20">Some of our work</h2> */}
 
         <div className="flex flex-col-reverse items-center justify-center pt-20 lg:flex-row lg:items-start">
 
           <Image
             src={Work[0].imgUrl}
-            width={1450}
-            height={1450}
+            width={860}
+            height={860}
             alt={`${Work[0].title} example`}
           />
 
-          <dl className="pl-6 pt-4 text-left h-fit bg-slate-200">
-            <dt className="work-title">What you get</dt>
+          <dl className="pl-6 pt-4 text-left h-fit xl:w-[66.3rem] sm:border-r-8 bg-slate-100 border-black">
+            <dt className="text-4xl font-semibold">What you get</dt>
             <dd className="pl-6 text-2xl py-4">Vast icon library</dd>
             <dd className="pl-6 text-2xl py-4">API Integration</dd>
             <dd className="pl-6 text-2xl py-4">Beautiful animation transitions</dd>
@@ -160,15 +129,39 @@ export default function Home() {
 
         </div>
 
+        <div className="hidden md:block absolute translate-y-[-55rem] w-screen h-[65rem] bg-slate-200 skew-y-1 z-[-1] border-t-[1rem] border-slate-400 animate-expandWidth border-double" />
+
       </section>
 
-      {/* </section> */}
 
-      <section className="py-20">
+
+      <section className="animate-stretch py-20">
+        <h2 className="text-5xl title">Grow your business today</h2>
+        <dl className="flex flex-col sm:flex-row justify-center gap-4 items-center pt-12">
+
+          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+            <dt className="text-[20px]">Unique Design</dt>
+            <dd>Direct communication for your design.</dd>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+            <dt className="text-[20px]">Always Online</dt>
+            <dd>24/7 email customer support system.</dd>
+          </div>
+
+          <div className="bg-white rounded-lg p-4 w-80 text-left hover:bg-slate-200">
+            <dt className="text-[20px]">No Limits</dt>
+            <dd>From eCommerce to Online Games.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="pricing" className="pt-12">
+
         <h2 className="title text-5xl">Pricing</h2>
 
         <table className="table-mobile sm:m-auto sm:justify-center text-left pt-20" ref={refPrice}>
-          <tbody className={`border-2 p-1 rounded-lg rounded-b-none shadow-md shadow-black transition-all overflow-y-hidden
+          <tbody className={`border-4 border-slate-300 transition-all overflow-y-hidden
           ${observerPrice ? "animate-expand" : ""}`} >
             <tr className="pointer-events-none">
               <th />
@@ -202,26 +195,26 @@ export default function Home() {
             </tr>
 
             <tr>
-              <td className="transition-[font]">Custom Domain</td>
+              <td className="transition-[font] pl-2">Custom Domain</td>
               <TableBlock check={true} />
               <TableBlock check={true} />
               <TableBlock check={true} />
             </tr>
             <tr>
-              <td className="transition-[font]">SSL Certificate</td>
+              <td className="transition-[font] pl-2">SSL Certificate</td>
               <TableBlock check={true} />
               <TableBlock check={true} />
               <TableBlock check={true} />
 
             </tr>
             <tr>
-              <td className="transition-[font]">Maintenence</td>
+              <td className="transition-[font] pl-2">Maintenence</td>
               <TableBlock check={false} />
               <TableBlock check={true} />
               <TableBlock check={true} />
             </tr>
             <tr>
-              <td className="transition-[font]">24/7 Customer Service</td>
+              <td className="transition-[font] pl-2">24/7 Customer Service</td>
               <TableBlock check={false} />
               <TableBlock check={false} />
               <TableBlock check={true} />
@@ -229,7 +222,10 @@ export default function Home() {
 
           </tbody>
         </table>
+
       </section>
+
+
 
     </>
   )

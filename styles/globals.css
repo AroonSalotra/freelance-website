@@ -18,12 +18,17 @@ body {
   text-align: center;
   font-family: sans-serif;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* background-color: black; */
+
+  @apply bg-slate-200 bg-white
 }
 
 .title {
   @apply w-fit mx-auto border-b-2 border-black
 }
 
+#pricing {
+}
 
 
 .container {
@@ -116,11 +121,11 @@ tr:hover td {
 td {}
 
 tr:nth-child(even) {
-  @apply bg-stone-200
+  @apply bg-stone-100
 }
 
 tr:nth-child(odd) {
-  @apply bg-stone-100
+  @apply bg-slate-200
 }
 
 tr:hover {
@@ -128,5 +133,5 @@ tr:hover {
 }
 
 .work-title {
-  @apply text-4xl xl:text-7xl font-bold 
+  /* @apply text-4xl xl:text-7xl font-bold  */
 }
