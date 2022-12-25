@@ -64,24 +64,38 @@ body {
   align-items: center;
 }
 
+.modal-show {
+  opacity: 1;
+  /* transform: translateY(2rem); */
+  transition: all 400ms ease;
+}
+
+.modal-hide {
+  opacity: 0;
+  pointer-events: none;
+}
 
 input[type=radio] {
   display: none;
 }
 
-
 input[type=radio]:checked+label {
   @apply bg-black text-blue-600
 }
 
+fieldset {
+  @apply pt-4
+}
 
-input[type=checkbox] {
-  /* transform: scale(3); */
-  /* Add if not using autoprefixer */
+legend {
+  @apply pb-0 border-b-2 border-black
+}
+
+
+
+/* input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
-
-  /* background-color: red; */
   font: inherit;
   color: currentColor;
   width: 1em;
@@ -90,25 +104,21 @@ input[type=checkbox] {
   border-radius: 0.15em;
   border-radius: 20%;
   transform: translateY(-0.075em);
-
-  display: grid;
   place-content: center;
 }
 
 input[type=checkbox]::before {
   content: "";
   width: 0.65em;
-  /* margin-left: 1px; */
   height: 0.65em;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
-  /* box-shadow: inset 1em 1em var(--form-control-color); */
 }
 
 input[type="checkbox"]:checked::before {
   transform: scale(1);
   background-color: rgb(53, 129, 106);
-}
+} */
 
 .table-mobile {
   @apply flex justify-start w-full overflow-auto
