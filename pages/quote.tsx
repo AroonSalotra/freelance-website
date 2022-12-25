@@ -53,7 +53,7 @@ const Quote = () => {
                     <form className="flex flex-col gap-4"
                         action="" onSubmit={handleSubmit}>
 
-                        <fieldset>
+                        <fieldset className="flex flex-col gap-4 sm:block">
 
                             <legend>Website Type</legend>
 
@@ -92,7 +92,7 @@ const Quote = () => {
 
                         </fieldset>
 
-                        <fieldset>
+                        <fieldset className="flex flex-col gap-4 sm:block">
 
                             <legend>Base Style</legend>
 

@@ -108,7 +108,7 @@ input[type=checkbox]:checked::before {
 }
 
 input[type=checkbox] {
-  transform: scale(1.5);
+  transform: scale(1.8);
   appearance: none;
   font: inherit;
   color: currentColor;
