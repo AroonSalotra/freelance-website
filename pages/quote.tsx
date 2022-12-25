@@ -9,10 +9,17 @@ const Quote = () => {
     const [stylePrice, setStylePrice] = useState<number>(0)
     const [showModal, setShowModal] = useState<boolean>(false)
     const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
+    const [formLevel, setFormLevel] = useState<string | undefined>("form-level-1")
 
-    // useEffect(() => {
-    //     setTotal(current => current + sitePrice)
-    // }, [sitePrice])
+    useEffect(() => {
+
+        if (stylePrice > 0) {
+            setFormLevel("form-level-3")
+        } else if (sitePrice > 0) {
+            setFormLevel("form-level-2")
+        }
+
+    }, [sitePrice, stylePrice])
 
 
     const handleChange = (
@@ -50,7 +57,8 @@ const Quote = () => {
                 :
                 <>
                     <h1 className="text-3xl py-3 mb-4 px-2 bg-slate-300 w-fit mx-auto rounded-lg">Get a quote</h1>
-                    <form className="flex flex-col gap-4"
+
+                    <form className={`flex flex-col gap-12 overflow-hidden w-screen mx-auto sm:w-fit sm:py-4 sm:px-8 bg-slate-100 transition-[height] ${formLevel}`}
                         action="" onSubmit={handleSubmit}>
 
                         <fieldset className="flex flex-col gap-4 sm:block">
@@ -62,7 +70,7 @@ const Quote = () => {
                                 name="type"
                                 id="commerce"
                                 value={40}
-                                onChange={(e) => handleChange(e, setStylePrice)} />
+                                onChange={(e) => handleChange(e, setSitePrice)} />
 
                             <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="commerce">E-Commerce</label>
@@ -72,7 +80,7 @@ const Quote = () => {
                                 name="type"
                                 id="resource"
                                 value={20}
-                                onChange={(e) => handleChange(e, setStylePrice)} />
+                                onChange={(e) => handleChange(e, setSitePrice)} />
 
 
                             <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
@@ -83,7 +91,7 @@ const Quote = () => {
                                 name="type"
                                 id="game"
                                 value={30}
-                                onChange={(e) => handleChange(e, setStylePrice)} />
+                                onChange={(e) => handleChange(e, setSitePrice)} />
 
 
                             <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
@@ -101,7 +109,7 @@ const Quote = () => {
                                 name="style"
                                 id="modern"
                                 value={15}
-                                onChange={(e) => handleChange(e, setSitePrice)} />
+                                onChange={(e) => handleChange(e, setStylePrice)} />
 
                             <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="modern">Modern</label>
@@ -111,7 +119,7 @@ const Quote = () => {
                                 name="style"
                                 id="classic"
                                 value={10}
-                                onChange={(e) => handleChange(e, setSitePrice)} />
+                                onChange={(e) => handleChange(e, setStylePrice)} />
 
                             <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="classic">Classic</label>
@@ -121,7 +129,7 @@ const Quote = () => {
                                 name="style"
                                 id="abstract"
                                 value={10}
-                                onChange={(e) => handleChange(e, setSitePrice)} />
+                                onChange={(e) => handleChange(e, setStylePrice)} />
 
                             <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="abstract">Abstract</label>

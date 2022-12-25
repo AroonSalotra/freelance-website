@@ -97,7 +97,6 @@ input[type=checkbox]::before {
   height: 1em;
   transform: scale(0);
   transition: all 200ms ease-in;
-
 }
 
 input[type=checkbox]:checked::before {
@@ -131,12 +130,24 @@ input[type=checkbox] {
   gap: 0.5em;
 }
 
-.checkbox:hover  input {
+.checkbox:hover input {
   @apply bg-slate-200
 }
 
 .table-mobile {
   @apply flex justify-start w-full overflow-auto
+}
+
+.form-level-1 {
+  @apply h-56 sm:h-32
+}
+
+.form-level-2 {
+  @apply h-[30rem] sm:h-64
+}
+
+.form-level-3 {
+  @apply h-[52rem] sm:h-[36rem]
 }
 
 table {}
