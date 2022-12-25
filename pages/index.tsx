@@ -227,7 +227,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-4 items-center">
 
-          <button className="bg-blue-500 p-2 rounded-lg w-fit text-2xl">
+          <button className="bg-slate-200 p-2 rounded-lg w-fit text-2xl hover:bg-slate-300">
             <Link href={"/quote"}>
               One time purchase
             </Link>

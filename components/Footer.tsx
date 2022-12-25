@@ -1,16 +1,26 @@
 const Footer = () => {
 
     const footerList: { body: string, redirect: string }[] = [
-        { body: "Github", redirect: "" },
-        { body: "My Website", redirect: "" }
+        {
+            body: "My Github",
+            redirect: "https://github.com/AroonSalotra"
+        },
+        {
+            body: "My Website",
+            redirect: "https://www.aroonsalotra.com/"
+        }
     ]
 
     return (
-        <footer className="bg-gray-300 mt-20">
-            <ul className="flex flex-col">
+        <footer className="bg-slate-800 text-white mt-20 py-4">
+            <i>This is a mock website for demonstrating my programming ability</i>
+            <ul className="flex justify-center gap-20">
                 {footerList.map(({ body, redirect }) => {
-                    return <li key={body} className="py-1">
-                        <a href={redirect}>{body}</a>
+                    return <li key={body}
+                        className="py-1 hover:underline">
+                        <a href={redirect}
+                            target="_blank"
+                            rel="noreferrer" >{body}</a>
                     </li>
                 })}
             </ul>

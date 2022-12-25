@@ -12,10 +12,10 @@ const Navbar = () => {
 
     const navList: { body: string, redirect: string }[] = [
         { body: "Home", redirect: "/" },
-        { body: "Work", redirect: "" },
-        { body: "Contact", redirect: "" },
+        // { body: "Work", redirect: "" },
+        // { body: "Contact", redirect: "" },
         { body: "Quote", redirect: "/quote" },
-        { body: "Pricing", redirect: "/pricing" },
+        // { body: "Pricing", redirect: "/pricing" },
     ]
 
     return (
