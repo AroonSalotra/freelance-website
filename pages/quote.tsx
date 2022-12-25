@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 
 const Quote = () => {
@@ -7,6 +8,7 @@ const Quote = () => {
     const [sitePrice, setSitePrice] = useState<number>(0)
     const [stylePrice, setStylePrice] = useState<number>(0)
     const [showModal, setShowModal] = useState<boolean>(false)
+    const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
 
     // useEffect(() => {
     //     setTotal(current => current + sitePrice)
@@ -25,6 +27,7 @@ const Quote = () => {
         e.preventDefault()
         if (sitePrice !== 0 && stylePrice !== 0) {
             setShowModal(current => !current)
+            setIsSubmitted(current => true)
         }
     }
 
@@ -33,114 +36,144 @@ const Quote = () => {
 
     return (
         <div>
-            <h1 className="text-3xl">Get a quote</h1>
-            <form className="flex flex-col gap-4"
-                action="" onSubmit={handleSubmit} >
-                <fieldset>
+            {/* Hide form when user submits */}
+            {isSubmitted ? <>
+                <h1>Thank you for your submission</h1>
 
-                    <legend>Website Type</legend>
+                <button className="p-2 rounded-lg bg-blue-500 font-semibold text-white">
+                    <Link href={"/"}>
+                        Back to home
+                    </Link>
+                </button>
 
-                    <input
-                        type="radio"
-                        name="type"
-                        id="commerce"
-                        value={40}
-                        onChange={(e) => handleChange(e, setStylePrice)} />
+            </>
+                :
+                <>
+                    <h1 className="text-3xl py-3 mb-4 px-2 bg-slate-300 w-fit mx-auto rounded-lg">Get a quote</h1>
+                    <form className="flex flex-col gap-4"
+                        action="" onSubmit={handleSubmit}>
 
-                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
-                        htmlFor="commerce">E-Commerce</label>
+                        <fieldset>
 
-                    <input
-                        type="radio"
-                        name="type"
-                        id="resource"
-                        value={20}
-                        onChange={(e) => handleChange(e, setStylePrice)} />
+                            <legend>Website Type</legend>
 
+                            <input
+                                type="radio"
+                                name="type"
+                                id="commerce"
+                                value={40}
+                                onChange={(e) => handleChange(e, setStylePrice)} />
 
-                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
-                        htmlFor="resource">Resource</label>
+                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                                htmlFor="commerce">E-Commerce</label>
 
-                    <input
-                        type="radio"
-                        name="type"
-                        id="game"
-                        value={30}
-                        onChange={(e) => handleChange(e, setStylePrice)} />
-
-
-                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
-                        htmlFor="game">Online Game</label>
+                            <input
+                                type="radio"
+                                name="type"
+                                id="resource"
+                                value={20}
+                                onChange={(e) => handleChange(e, setStylePrice)} />
 
 
-                </fieldset>
+                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                                htmlFor="resource">Resource</label>
 
-                <fieldset>
+                            <input
+                                type="radio"
+                                name="type"
+                                id="game"
+                                value={30}
+                                onChange={(e) => handleChange(e, setStylePrice)} />
 
-                    <legend>Base Style</legend>
 
-                    <input
-                        type="radio"
-                        name="style"
-                        id="modern"
-                        value={15}
-                        onChange={(e) => handleChange(e, setSitePrice)} />
+                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                                htmlFor="game">Online Game</label>
 
-                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
-                        htmlFor="modern">Modern</label>
 
-                    <input
-                        type="radio"
-                        name="style"
-                        id="classic"
-                        value={10}
-                        onChange={(e) => handleChange(e, setSitePrice)} />
+                        </fieldset>
 
-                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
-                        htmlFor="classic">Classic</label>
+                        <fieldset>
 
-                    <input
-                        type="radio"
-                        name="style"
-                        id="abstract"
-                        value={10}
-                        onChange={(e) => handleChange(e, setSitePrice)} />
+                            <legend>Base Style</legend>
 
-                    <label className="bg-blue-500 p-2 rounded-lg hover:bg-blue-400"
-                        htmlFor="abstract">Abstract</label>
+                            <input
+                                type="radio"
+                                name="style"
+                                id="modern"
+                                value={15}
+                                onChange={(e) => handleChange(e, setSitePrice)} />
 
-                </fieldset>
+                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                                htmlFor="modern">Modern</label>
 
-                <fieldset className="flex flex-col py-4">
+                            <input
+                                type="radio"
+                                name="style"
+                                id="classic"
+                                value={10}
+                                onChange={(e) => handleChange(e, setSitePrice)} />
 
-                    {/* <div class="grid grid-rows-[200px_minmax(900px,_1fr)_100px]"> */}
+                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                                htmlFor="classic">Classic</label>
 
-                    <legend>Optional Extras</legend>
+                            <input
+                                type="radio"
+                                name="style"
+                                id="abstract"
+                                value={10}
+                                onChange={(e) => handleChange(e, setSitePrice)} />
 
-                    <label htmlFor="animations">Animations
-                        <input type="checkbox" name="" id="animations" />
-                    </label>
+                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                                htmlFor="abstract">Abstract</label>
 
-                    <label htmlFor="responsivity">Mobile Responsivity
-                        <input type="checkbox" name="" id="responsivity" />
-                    </label>
+                        </fieldset>
 
-                    <label htmlFor="adsense">Google Adsense
-                        <input type="checkbox" name="" id="adsense" />
-                    </label>
+                        <fieldset className="flex flex-col gap-4 py-4 mx-auto">
 
-                    <label htmlFor="socialmedia">Social Media Post
-                        <input type="checkbox" name="" id="socialmedia" />
-                    </label>
-                </fieldset>
+                            {/* <div class="grid grid-rows-[200px_minmax(900px,_1fr)_100px]"> */}
 
-                <button>Send Request</button>
+                            <legend>Optional Extras</legend>
 
-            </form>
+                            <label htmlFor="animations" className="checkbox">
+                                <input type="checkbox" name="" id="animations" />Animations
+                            </label>
+
+                            <label htmlFor="responsivity" className="checkbox">
+                                <input type="checkbox" name="" id="responsivity" />Mobile Support
+                            </label>
+
+                            <label htmlFor="adsense" className="checkbox">
+                                <input type="checkbox" name="" id="adsense" />Google Adsense
+                            </label>
+
+                            <label htmlFor="socialmedia" className="checkbox">
+                                <input type="checkbox" name="" id="socialmedia" />Social Media Post
+                            </label>
+                        </fieldset>
+
+                        <button className="bg-blue-500 w-fit mx-auto p-2 px-4 rounded-md">
+                            Send Request</button>
+
+                    </form>
+
+
+
+
+
+                    <h3 className="border-t-2 border-black w-fit mx-auto bg-slate-100 p-2 rounded-lg mt-8">
+                        Est. Price:
+                        <span className="text-4xl p-4 pointer-events-none">
+                            £{sitePrice + stylePrice}</span>
+                    </h3>
+
+                    <p className="text-sm text-center mx-auto text-slate-500 pt-4 italic">
+                        One time purchase does not come with scheduled website maintenence and upgrade availablity, if you would like scheduled updating - please use a monthly plan instead.
+                    </p>
+                </>}
 
             <div id="modal"
                 className={`bg-slate-100 w-fit absolute p-8 border-t-[1rem] border-blue-500 
-                top-[12%] left-[50%] translate-x-[-8rem] ${showModal ? "modal-show" : "modal-hide"}`}>
+                top-[12%] left-[50%] translate-x-[-8rem] shadow-lg shadow-black ${showModal ? "modal-show" : "modal-hide"}`}>
 
                 <h1>Your request has been sent!</h1>
 
@@ -149,21 +182,8 @@ const Quote = () => {
                     Continue</button>
             </div>
 
-
-
-            <h3 className="border-t-2 border-black w-fit mx-auto bg-slate-100 p-2 rounded-lg">
-                Est. Price:
-                <span className="text-4xl p-4 pointer-events-none">
-                    £{sitePrice + stylePrice}</span>
-            </h3>
-
-            <p className="text-sm text-center mx-auto text-slate-500 pt-4 italic">
-                One time purchase does not come with scheduled website maintenence and upgrade availablity, if you would like scheduled updating - please use a monthly plan instead.
-            </p>
-
-            {/* <h2>{sitePrice + stylePrice}</h2> */}
-            {/* <h2 className="capitalize">{websiteOption}</h2> */}
         </div>
+
     );
 }
 
