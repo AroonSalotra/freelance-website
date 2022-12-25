@@ -223,6 +223,21 @@ export default function Home() {
           </tbody>
         </table>
 
+        <h2 className="py-8 text-2xl font-semibold">or</h2>
+
+        <div className="flex flex-col gap-4 items-center">
+
+          <button className="bg-blue-500 p-2 rounded-lg w-fit text-2xl">
+            <Link href={"/quote"}>
+              One time purchase
+            </Link>
+          </button>
+
+          <i className="text-sm text-slate-500">
+            *Does not include SSL Certificate or Maintenence</i>
+
+        </div>
+
       </section>
 
 
