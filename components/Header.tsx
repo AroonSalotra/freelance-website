@@ -6,7 +6,8 @@ const Header = () => {
     return (
         <header className="absolute w-8 h-auto sm:w-20">
             <Link href={"/"}>
-                <Image src={logo}
+                <Image className="transition-all hover:scale-95 active:scale-105"
+                    src={logo}
                     width={64}
                     height={64}
                     alt="my logo"

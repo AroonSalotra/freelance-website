@@ -38,11 +38,10 @@ const Quote = () => {
         }
     }
 
-
-
-
     return (
-        <div className="h-[69.46rem]">
+        <div>
+            <h1 className="text-3xl py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
+                Get a quote</h1>
             {/* Hide form when user submits */}
             {isSubmitted ? <>
                 <h1>Thank you for your submission</h1>
@@ -56,7 +55,7 @@ const Quote = () => {
             </>
                 :
                 <>
-                    <h1 className="text-3xl py-3 mb-4 px-2 bg-slate-300 w-fit mx-auto rounded-lg">Get a quote</h1>
+
 
                     <form className={`flex flex-col gap-12 overflow-hidden w-screen mx-auto sm:w-fit sm:py-4 sm:px-8 bg-slate-100 transition-[height] ${formLevel}`}
                         action="" onSubmit={handleSubmit}>
