@@ -13,21 +13,22 @@ const SupportTab = ({ title, body }: TProps) => {
 
     return (
 
-        <div className={`p-4 bg-slate-100 w-fit overflow-hidden transition-[height] w-76
-        ${showSupportTab ? "h-60" : "h-12"}`}>
+        <div className={`overflow-hidden transition-[max-height] w-72`}>
             {/* <h3 className="text-left uppercase">Problem</h3> */}
-            <div className="flex items-center gap-12">
+
+            <div className="flex justify-between bg-slate-100 p-4">
                 <p>{title}</p>
 
                 <button onClick={() => setShowSupportTab(!showSupportTab)}>
                     <FiArrowRight
-                        className={`text-2xl transition-transform
-                        ${showSupportTab ? "rotate-90" : ""}`} />
+                        className={`text-2xl transition-transform hidden
+                        ${showSupportTab ? "rotate-90" : ""} sm:flex`} />
                 </button>
 
             </div>
 
-            <p className="w-60 pt-8 text-left">
+            <p className={`w-fit px-6 text-left bg-slate-100 transition-opacity
+            ${showSupportTab ? "sm:opacity-1" : "sm:opacity-0"}`}>
                 {body}
             </p>
 

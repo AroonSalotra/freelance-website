@@ -11,9 +11,9 @@ const Support = () => {
 
     return (
         <div>
-            <h1 className="text-5xl font-semibold pb-8">Help Center</h1>
+            <h1 className="text-5xl font-semibold py-8">Help Center</h1>
 
-            <div className="flex justify-center gap-20">
+            <div className="flex flex-col items-center place-items-center items-start gap-y-8 sm:grid sm:grid-cols-2 md:grid-cols-3">
                 {SupportData.map(({ title, body }) => {
                     return <Fragment key={title}>
                         <SupportTab title={title} body={body} />

@@ -23,6 +23,13 @@ body {
   /* @apply bg-slate-200 bg-white */
 }
 
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* justify-content: center; */
+  /* border: 2px solid red; */
+}
+
 .title {
   @apply w-fit mx-auto border-b-2 border-black
 }
