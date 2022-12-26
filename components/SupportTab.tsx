@@ -20,7 +20,7 @@ const SupportTab = ({ title, body }: TProps) => {
             <button onClick={() => setShowSupportTab(!showSupportTab)}
                 className="flex justify-between bg-slate-100 py-4">
 
-                <p className="pl-4 text-left w-[16.5rem] text-[18px] font-thin">{title}</p>
+                <p className="w-screen pl-4 text-left sm:w-[16.5rem] text-[18px] font-thin">{title}</p>
 
                 <FiArrowRight
                     className={`text-2xl transition-transform hidden
