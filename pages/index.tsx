@@ -129,7 +129,7 @@ export default function Home() {
 
         </div>
 
-        <div className="hidden md:block absolute translate-y-[-55rem] w-screen h-[65rem] bg-slate-200 skew-y-1 z-[-1] border-t-[1rem] border-b-2 border-slate-400 animate-expandWidth border-double" />
+        <div className="hidden md:block absolute translate-y-[-55rem] w-full h-[65rem] bg-slate-200 skew-y-1 z-[-1] border-t-[1rem] border-b-2 border-slate-400 animate-expandWidth border-double" />
 
       </section>
 
