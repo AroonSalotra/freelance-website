@@ -42,7 +42,7 @@ const Quote = () => {
 
 
     return (
-        <div className="h-[70rem]">
+        <div className="h-[69.46rem]">
             {/* Hide form when user submits */}
             {isSubmitted ? <>
                 <h1>Thank you for your submission</h1>
