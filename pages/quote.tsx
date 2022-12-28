@@ -39,7 +39,7 @@ const Quote = () => {
     }
 
     return (
-        <div>
+        <div className="h-full">
             <h1 className="text-5xl title-2 tracking-wider py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
                 Get a quote</h1>
             {/* Hide form when user submits */}
@@ -56,7 +56,6 @@ const Quote = () => {
             </>
                 :
                 <>
-
 
                     <form className={`flex flex-col gap-12 overflow-hidden w-screen mx-auto sm:w-fit sm:py-4 sm:px-8 bg-slate-100 transition-[height] ${formLevel}`}
                         action="" onSubmit={handleSubmit}>
@@ -177,8 +176,7 @@ const Quote = () => {
                 </>}
 
             <div id="modal"
-                className={`bg-slate-100 w-fit absolute p-8 border-t-[1rem] border-blue-500 
-                top-[12%] left-[50%] translate-x-[-8rem] shadow-lg shadow-black ${showModal ? "modal-show" : "modal-hide"}`}>
+                className={`bg-slate-100 w-screen absolute p-8 border-t-[1rem] border-blue-500 sm:top-[50%] sm:translate-x-[-50%] sm:translate-y-[-20rem] sm:left-[50%] sm:w-fit shadow-lg shadow-black ${showModal ? "modal-show" : "modal-hide"}`}>
 
                 <h1>Your request has been sent!</h1>
 
