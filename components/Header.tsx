@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Header = () => {
     return (
-        <header className="absolute w-8 h-auto sm:w-20">
+        <header className="absolute w-12 h-auto sm:w-20">
             <Link href={"/"}>
                 <Image className="transition-all hover:scale-95 active:scale-105"
                     src={logo}
