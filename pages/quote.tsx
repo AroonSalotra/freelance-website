@@ -45,13 +45,16 @@ const Quote = () => {
             {/* Hide form when user submits */}
             {isSubmitted ? <>
 
-                <h1 className="pb-4">Thank you for your submission</h1>
+                <div className="mb-8">
 
-                <button className="p-2 mb-12 rounded-lg bg-blue-300 hover:scale-105">
-                    <Link href={"/"}>
+                    <h1 className="pb-4">Thank you for your submission</h1>
+
+                    <Link className="p-2 bg-blue-300 rounded-lg hover:bg-blue-400"
+                        href={"/"}>
                         Back to home
                     </Link>
-                </button>
+
+                </div>
 
             </>
                 :
