@@ -19,7 +19,7 @@ export default function Home() {
   const scrollRef = useRef<HTMLInputElement>(null)
 
   const handleClickScroll = () => {
-    const {current} = scrollRef
+    const { current } = scrollRef
 
     if (current !== null) {
       return current.scrollIntoView()
@@ -69,8 +69,8 @@ export default function Home() {
       </section>
 
       <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 md:px-40 md:rounded-full shadow-lg">
-        
-        <h2 className="text-5xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 sm:pr-20">
+
+        <h2 className="text-5xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 title-2 !text-black sm:pr-20">
           How it works</h2>
         <ol className="pl-4 sm:pl-0 text-left flex flex-col gap-4">
           <li className="text-[1.5rem]">Select one of our available plans</li>
@@ -95,7 +95,7 @@ export default function Home() {
           />
 
           <dl className="pl-6 pt-4 text-left h-fit xl:w-[66.3rem] sm:border-r-8 bg-slate-100 border-black">
-            <dt className="text-4xl font-semibold">What you get</dt>
+            <dt className="text-4xl font-semibold title-2 !text-black">What you get</dt>
             <dd className="pl-6 text-2xl py-4">Vast icon library</dd>
             <dd className="pl-6 text-2xl py-4">API Integration</dd>
             <dd className="pl-6 text-2xl py-4">Beautiful animation transitions</dd>
@@ -158,7 +158,7 @@ export default function Home() {
               <th />
               <th>
                 <div className="flex flex-col items-center">
-                  <h2 className={`font-normal bg-slate-200 p-1 px-2 sm:absolute sm:translate-y-[-2rem]
+                  <h2 className={`font-normal bg-blue-100 p-1 px-2 sm:absolute sm:translate-y-[-2rem]
                   ${observerPrice ? "animate-fade" : ""}`}>
                     Most Popular</h2>
                   <h2 className="text-2xl">Beginner</h2>
