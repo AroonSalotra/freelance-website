@@ -19,16 +19,16 @@ const SupportTab = ({ title, body }: TProps) => {
             <button onClick={() => setShowSupportTab(!showSupportTab)}
                 className="flex justify-between py-4 shadow-md w-full items-center hover:shadow-lg bg-white">
 
-                <p className="w-fit pl-2 text-left h-12 sm:w-[16.5rem] text-[18px] font-thin">{title}</p>
+                <p className="w-fit pl-2 text-left h-12 sm:w-[16.5rem] text-[18px]">{title}</p>
 
                 <FiArrowRight
                     className={`text-2xl transition-transform hidden
-                        ${showSupportTab ? "rotate-90" : ""} sm:flex`} />
+                        ${showSupportTab ? "rotate-90" : ""} md:flex`} />
             </button>
 
 
             <p className={`w-fit h-52 px-6 py-4 text-left transition-opacity font-light bg-gray-50
-            ${showSupportTab ? "opacity-1" : "opacity-0"}`}>
+            ${showSupportTab ? "md:opacity-1" : "md:opacity-0"}`}>
                 {body}
             </p>
 
