@@ -23,7 +23,7 @@ const Footer = () => {
         ]
 
     return (
-        <footer className="bg-slate-800 text-white py-4 flex flex-col items-center sm:flex-row sm:justify-around">
+        <footer className="bg-slate-800 text-white py-4 flex flex-col items-center pt-4 sm:flex-row sm:justify-around">
 
             <i>This is a mock website for demonstrating my programming ability</i>
 

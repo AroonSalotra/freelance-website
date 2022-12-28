@@ -165,16 +165,13 @@ const Quote = () => {
                     </form>
 
 
-
-
-
                     <h3 className="border-t-2 border-black w-fit mx-auto bg-slate-100 p-2 rounded-lg mt-8">
                         Est. Price:
                         <span className="text-4xl p-4 pointer-events-none">
                             £{sitePrice + stylePrice}</span>
                     </h3>
 
-                    <p className="text-sm text-center mx-auto text-slate-500 pt-4 italic">
+                    <p className="text-sm text-center mx-auto text-slate-500 pt-4 italic mb-8">
                         One time purchase does not come with scheduled website maintenence and upgrade availablity, if you would like scheduled updating - please use a monthly plan instead.
                     </p>
                 </>}

@@ -18,9 +18,9 @@ export default function Home() {
 
   const [index, setIndex] = useState(90)
 
-  const { ref: refQuote, inView: observerBtn } = useInView({ triggerOnce: false })
-  const { ref: refWork, inView: observerWork } = useInView({ triggerOnce: false })
-  const { ref: refPrice, inView: observerPrice } = useInView({ triggerOnce: false })
+  const { ref: refQuote, inView: observerBtn } = useInView({ triggerOnce: true })
+  const { ref: refWork, inView: observerWork } = useInView({ triggerOnce: true })
+  const { ref: refPrice, inView: observerPrice } = useInView({ triggerOnce: true })
   const scrollRef = useRef<HTMLInputElement>(null)
 
   const handleClickScroll = () => {
@@ -222,7 +222,7 @@ export default function Home() {
 
         <h2 className="py-8 text-2xl font-semibold">or</h2>
 
-        <div className="flex flex-col gap-4 items-center">
+        <div className="flex flex-col gap-4 items-center mb-8">
 
           <button className="bg-slate-200 p-2 rounded-lg w-fit text-2xl hover:bg-slate-300">
             <Link href={"/quote"}>
