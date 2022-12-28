@@ -29,7 +29,7 @@ const SupportTab = ({ title, body }: TProps) => {
 
 
             <p className={`w-fit px-6 text-left bg-slate-100 transition-opacity font-light
-            ${showSupportTab ? "sm:opacity-1" : "sm:opacity-0"}`}>
+            ${showSupportTab ? "md:opacity-1" : "md:opacity-0"}`}>
                 {body}
             </p>
 

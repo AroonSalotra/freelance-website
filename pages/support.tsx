@@ -52,7 +52,7 @@ const Support = () => {
             </form>
 
             <h2 className="pt-20 text-3xl">Common questions</h2>
-            <div className="flex flex-col items-center place-items-center items-start pb-12 gap-y-8 sm:grid sm:grid-cols-3 pt-20">
+            <div className="flex flex-col items-center place-items-center items-start pb-12 gap-y-8 sm:grid md:grid-cols-3 pt-20 2xl:px-80">
                 {SupportData.map(({ title, body, id }) => {
                     return <Fragment key={id}>
                         <SupportTab title={title} body={body} />
