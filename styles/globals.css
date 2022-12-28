@@ -82,12 +82,17 @@ body {
   pointer-events: none;
 }
 
+label {
+  cursor: pointer;
+}
+
 input[type=radio] {
   display: none;
 }
 
 input[type=radio]:checked+label {
-  @apply bg-black text-blue-600
+  /* @apply bg-black text-blue-600 */
+  @apply bg-blue-400
 }
 
 fieldset {
@@ -95,7 +100,7 @@ fieldset {
 }
 
 legend {
-  @apply pb-0 border-b-2 border-black text-2xl
+  @apply pb-1 border-black text-2xl
 }
 
 input[type=search] {
@@ -140,6 +145,7 @@ input[type=checkbox] {
   place-content: center;
   border: 1.5px solid black;
   border-radius: 20%;
+  cursor: pointer;
 }
 
 /* input [type=checkbox]:hover {

@@ -40,7 +40,7 @@ const Quote = () => {
 
     return (
         <div>
-            <h1 className="text-3xl py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
+            <h1 className="text-3xl font-semibold text-slate-600 tracking-wider py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
                 Get a quote</h1>
             {/* Hide form when user submits */}
             {isSubmitted ? <>
@@ -71,7 +71,7 @@ const Quote = () => {
                                 value={40}
                                 onChange={(e) => handleChange(e, setSitePrice)} />
 
-                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                            <label className="bg-blue-200 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="commerce">E-Commerce</label>
 
                             <input
@@ -82,7 +82,7 @@ const Quote = () => {
                                 onChange={(e) => handleChange(e, setSitePrice)} />
 
 
-                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                            <label className="bg-blue-200 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="resource">Resource</label>
 
                             <input
@@ -93,7 +93,7 @@ const Quote = () => {
                                 onChange={(e) => handleChange(e, setSitePrice)} />
 
 
-                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                            <label className="bg-blue-200 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="game">Online Game</label>
 
 
@@ -110,7 +110,7 @@ const Quote = () => {
                                 value={15}
                                 onChange={(e) => handleChange(e, setStylePrice)} />
 
-                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                            <label className="bg-blue-200 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="modern">Modern</label>
 
                             <input
@@ -120,7 +120,7 @@ const Quote = () => {
                                 value={10}
                                 onChange={(e) => handleChange(e, setStylePrice)} />
 
-                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                            <label className="bg-blue-200 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="classic">Classic</label>
 
                             <input
@@ -130,7 +130,7 @@ const Quote = () => {
                                 value={10}
                                 onChange={(e) => handleChange(e, setStylePrice)} />
 
-                            <label className="bg-blue-500 p-2 mx-2 rounded-lg hover:bg-blue-400"
+                            <label className="bg-blue-200 p-2 mx-2 rounded-lg hover:bg-blue-400"
                                 htmlFor="abstract">Abstract</label>
 
                         </fieldset>
@@ -158,7 +158,7 @@ const Quote = () => {
                             </label>
                         </fieldset>
 
-                        <button className="bg-blue-500 w-fit mx-auto p-2 px-4 rounded-md">
+                        <button className="bg-blue-400 w-fit mx-auto p-2 px-4 rounded-md">
                             Send Request</button>
 
                     </form>
