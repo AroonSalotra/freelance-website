@@ -50,7 +50,7 @@ const Support = () => {
 
 
             <h2 className="pt-8 text-3xl bg-slate-200 font-semibold title-2">Common questions</h2>
-            <div className="flex flex-col items-center place-items-center items-start gap-y-8 bg-slate-200 sm:grid md:grid-cols-3 pt-12 pb-20 2xl:px-80">
+            <div className="flex flex-col items-center place-items-center items-start gap-y-8 bg-slate-200 sm:grid md:grid-cols-2 lg:grid-cols-3 pt-12 pb-20 2xl:px-80 ">
                 {SupportData.map(({ title, body, id }) => {
                     return <Fragment key={id}>
                         <SupportTab title={title} body={body} />
