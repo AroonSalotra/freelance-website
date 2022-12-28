@@ -3,8 +3,6 @@ import Link from "next/link";
 
 
 const Quote = () => {
-    const [total, setTotal] = useState<number>(0)
-    // const [websiteOption, setWebsiteOption] = useState<undefined | string>()
     const [sitePrice, setSitePrice] = useState<number>(0)
     const [stylePrice, setStylePrice] = useState<number>(0)
     const [showModal, setShowModal] = useState<boolean>(false)
@@ -42,7 +40,6 @@ const Quote = () => {
         <div className="h-full pt-12">
             <h1 className="text-5xl title-2 tracking-wider py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
                 Get a quote</h1>
-            {/* Hide form when user submits */}
             {isSubmitted ? <>
 
                 <div className="mb-8">
@@ -56,10 +53,8 @@ const Quote = () => {
 
                 </div>
 
-            </>
-                :
+            </> :
                 <>
-
                     <form className={`flex flex-col gap-12 overflow-hidden w-screen mx-auto sm:w-fit sm:py-4 sm:px-8 bg-slate-100 transition-[height] ${formLevel}`}
                         action="" onSubmit={handleSubmit}>
 
@@ -189,7 +184,6 @@ const Quote = () => {
             </div>
 
         </div>
-
     );
 }
 

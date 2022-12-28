@@ -2,14 +2,9 @@ import { useEffect, useRef, useState } from "react"
 import { Dancing_Script } from "@next/font/google"
 import { BsArrowDownCircle } from "react-icons/bs"
 import Image from "next/image"
-import BGImage from "../public/bg-home.png"
 import Link from "next/link"
-import { GrUserWorker } from "react-icons/gr"
-import { MdPayment } from "react-icons/md"
-import { BsFillPencilFill } from "react-icons/bs"
 import Work from "../data/work-data.json"
 import { useInView } from "react-intersection-observer"
-import { AiFillLock, AiFillClockCircle, AiFillMobile } from "react-icons/ai"
 import TableBlock from "../components/TableBlock"
 
 const fontStylistic = Dancing_Script({ subsets: ["latin"] })
@@ -89,8 +84,6 @@ export default function Home() {
 
       <section id="work"
         className="max-w-8xl mx-auto" >
-
-        {/* <h2 className="text-5xl pt-20">Some of our work</h2> */}
 
         <div className="flex flex-col-reverse items-center justify-center pt-20 lg:flex-row lg:items-start">
 

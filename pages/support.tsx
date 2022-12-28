@@ -1,4 +1,3 @@
-import { FiArrowRight } from "react-icons/fi"
 import React, { useState, Fragment } from "react"
 import SupportTab from "../components/SupportTab"
 import SupportData from "../data/support-data.json"
@@ -6,13 +5,9 @@ import { BsSearch } from "react-icons/bs"
 
 const Support = () => {
 
-    // console.log(SupportData)
-
-    const [showSupportTab, setShowSupportTab] = useState<boolean>(false)
     const [searchValue, setSearchValue] = useState("")
 
     const handleChangeSearch = (e: React.FormEvent<HTMLInputElement>) => {
-        // e.preventDefault()
         const { value } = e.target as HTMLInputElement
         setSearchValue(value)
     }
@@ -20,13 +15,12 @@ const Support = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         setSearchValue(s => "")
-
     }
 
     return (
         <div className="pt-12">
 
-            <h1 className="text-5xl font-semibold py-8 title-2">
+            <h1 className="text-5xl py-8 title-2">
                 Support Center</h1>
 
             <h2 className="text-2xl">

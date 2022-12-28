@@ -11,23 +11,38 @@ html {
 }
 
 body {
-  /* max-width: 1200px; */
   margin: 0 auto;
-  /* padding: 0.5rem; */
   padding-bottom: 0;
   text-align: center;
   font-family: sans-serif;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  /* background-color: black; */
-
-  /* @apply bg-slate-200 bg-white */
 }
+
+/* Clears search bar cross from IE */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Clears search bar cross from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 
 .support-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* justify-content: center; */
-  /* border: 2px solid red; */
 }
 
 .bg-blur {
@@ -40,11 +55,8 @@ body {
 }
 
 .title-2 {
-  @apply tracking-wider text-slate-600
+  @apply tracking-wider text-slate-600 font-semibold
 }
-
-#pricing {}
-
 
 .container {
   @apply max-w-7xl mx-auto
@@ -61,18 +73,11 @@ body {
   background-position: 41rem;
 }
 
-.btn {
-  /* @apply border-2 border-black w-fit m-auto p-4 text-3xl hover: bg-black hover:text-white */
-}
-
 .icon-xl {
   @apply text-8xl m-auto
 }
 
 .form-question {
-  /* @apply bg-slate-200 mx-auto p-4 flex rounded-lg sm:gap-20 */
-
-  /* font-size: 2rem; */
   font-weight: bold;
   display: flex;
   gap: 1rem;
@@ -82,7 +87,6 @@ body {
 
 .modal-show {
   opacity: 1;
-  /* transform: translateY(2rem); */
   transition: all 400ms ease;
 }
 
@@ -100,7 +104,6 @@ input[type=radio] {
 }
 
 input[type=radio]:checked+label {
-  /* @apply bg-black text-blue-600 */
   @apply bg-blue-400
 }
 
@@ -109,23 +112,12 @@ fieldset {
 }
 
 legend {
-  @apply pb-1 border-black text-2xl 
+  @apply pb-1 border-black text-2xl
 }
 
 input[type=search] {
   outline: none;
 }
-
-/* Clears search bar cross from IE */
-input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
-input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
-
-/* Clears search bar cross from Chrome */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration { display: none; }
-
 
 input[type=checkbox]::before {
   content: "";
@@ -136,9 +128,7 @@ input[type=checkbox]::before {
 }
 
 input[type=checkbox]:checked::before {
-  /* background-color: red; */
   transform: scale(0.8);
-
   @apply bg-blue-500
 }
 
@@ -156,10 +146,6 @@ input[type=checkbox] {
   border-radius: 20%;
   cursor: pointer;
 }
-
-/* input [type=checkbox]:hover {
-  background-color: red;
-} */
 
 .checkbox {
   display: grid;
@@ -187,9 +173,6 @@ input[type=checkbox] {
   @apply h-[52rem] sm:h-[36rem]
 }
 
-table {}
-
-
 th, td {
   height: 4rem;
   width: 21.5rem;
@@ -201,8 +184,6 @@ tr:hover td {
   font-weight: 400;
 }
 
-td {}
-
 tr:nth-child(even) {
   @apply bg-stone-100
 }
@@ -213,8 +194,4 @@ tr:nth-child(odd) {
 
 tr:hover {
   @apply bg-slate-100
-}
-
-.work-title {
-  /* @apply text-4xl xl:text-7xl font-bold  */
 }
