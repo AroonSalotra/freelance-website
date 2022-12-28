@@ -1,32 +1,32 @@
 [
     {
-        "title": "How does payment work?",
+        "title": "How does payment work for one of your sites?",
         "body": "For the monthly plan, you will pay once the transaction has been accepted, for the single payment - payment will be requested before the website is pushed to your chosen domain",
         "id": "SPRT-PAYMENT"
     },
     {
-        "title": "Do you accept refunds?",
+        "title": "Do you accept any refunds or discounts?",
         "body": "No refunds for our monthly plan however you may cancel before your next monthly payment, for the single payment - refunds are only considered within 7 days of the website being published",
         "id": "SPRT-REFUND"
     },
     {
-        "title": "Do you accept refunds?",
-        "body": "No refunds for our monthly plan however you may cancel before your next monthly payment, for the single payment - refunds are only considered within 7 days of the website being published",
-        "id": "SPRT-OTHER1"
+        "title": "How long does this process take?",
+        "body": "Monthly plan subscribers will get high priority over other orders which usually takes 4 - 7 working days for completion.",
+        "id": "SPRT-LENGTH"
     },
     {
-        "title": "Do you accept refunds?",
-        "body": "No refunds for our monthly plan however you may cancel before your next monthly payment, for the single payment - refunds are only considered within 7 days of the website being published",
-        "id": "SPRT-OTHER2"
+        "title": "Are your websites accessible friendly??",
+        "body": "All of our websites are created with mobile & disability accessability in mind, being accessible to all users is a requirement on all of our products.",
+        "id": "SPRT-ACCESSIBLE"
     },
     {
-        "title": "Do you accept refunds?",
-        "body": "No refunds for our monthly plan however you may cancel before your next monthly payment, for the single payment - refunds are only considered within 7 days of the website being published",
-        "id": "SPRT-OETHER3"
+        "title": "How much do you take for commerce sites?",
+        "body": "On any website created that accepts payment, we will take 25% per transaction made",
+        "id": "SPRT-COMMERCE"
     },
     {
-        "title": "Do you accept refunds?",
-        "body": "No refunds for our monthly plan however you may cancel before your next monthly payment, for the single payment - refunds are only considered within 7 days of the website being published",
-        "id": "SPRT-OTHER4"
+        "title": "What do you mean by weekly manintenence?",
+        "body": "For our monthly plan subscribers, weekly manintenence consists of updating software to keep up to date as well as optimising performance should it slow for any reason",
+        "id": "SPRT-PERFORMANCE"
     }
 ]
