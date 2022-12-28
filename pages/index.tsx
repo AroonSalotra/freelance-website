@@ -48,18 +48,18 @@ export default function Home() {
     <>
 
 
-      <section className="pt-60 home border-b-8 bg-white">
+      <section className="pt-60 home border-b-8">
 
-        <h1 className="text-8xl">Design</h1>
-        <p className="text-2xl py-4">With no compromise</p>
+        <h1 className="text-8xl w-fit mx-auto rounded-md bg-white">Design</h1>
+        <p className="text-2xl py-4 bg-white w-fit mx-auto">With no compromise</p>
 
         <div className="overflow-hidden h-20 m-auto">
 
           <ul className="flex flex-col gap-40 justify-center text-3xl overflow-visible transition-[transform] duration-750 ease-out text-4xl"
             style={{ transform: `translateY(-${index}%)` }}>
 
-            <li>Modern</li>
-            <li className={fontStylistic.className}>Stylistic</li>
+            <li className="bg-white w-fit mx-auto">Modern</li>
+            <li className={`${fontStylistic.className} bg-white w-fit mx-auto`}>Stylistic</li>
             <li id="functional"
               className="w-fit px-2 mx-auto">
               Functional</li>

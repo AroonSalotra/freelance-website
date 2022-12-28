@@ -40,13 +40,14 @@ const Quote = () => {
 
     return (
         <div>
-            <h1 className="text-3xl font-semibold text-slate-600 tracking-wider py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
+            <h1 className="text-5xl title-2 tracking-wider py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
                 Get a quote</h1>
             {/* Hide form when user submits */}
             {isSubmitted ? <>
-                <h1>Thank you for your submission</h1>
 
-                <button className="p-2 rounded-lg bg-blue-500 font-semibold text-white">
+                <h1 className="pb-4">Thank you for your submission</h1>
+
+                <button className="p-2 mb-12 rounded-lg bg-blue-300 hover:scale-105">
                     <Link href={"/"}>
                         Back to home
                     </Link>

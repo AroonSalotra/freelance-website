@@ -28,7 +28,7 @@ const SupportTab = ({ title, body }: TProps) => {
             </button>
 
 
-            <p className={`w-fit px-6 text-left transition-opacity font-light bg-gray-50
+            <p className={`w-fit px-6 py-4 text-left transition-opacity font-light bg-gray-50
             ${showSupportTab ? "md:opacity-1" : "md:opacity-0"}`}>
                 {body}
             </p>

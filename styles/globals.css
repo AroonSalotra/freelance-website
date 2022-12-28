@@ -30,8 +30,17 @@ body {
   /* border: 2px solid red; */
 }
 
+.bg-blur {
+  background-color: rgba(27, 27, 27, 0.089);
+  backdrop-filter: blur(30px);
+}
+
 .title {
   @apply w-fit mx-auto border-b-2 border-black
+}
+
+.title-2 {
+  @apply tracking-wider text-slate-600
 }
 
 #pricing {}
@@ -100,7 +109,7 @@ fieldset {
 }
 
 legend {
-  @apply pb-1 border-black text-2xl
+  @apply pb-1 border-black text-2xl 
 }
 
 input[type=search] {
