@@ -25,18 +25,22 @@ const Support = () => {
 
     return (
         <div>
-            <h1 className="text-5xl font-semibold py-8">Help Center</h1>
 
 
+            <h1 className="text-5xl font-semibold py-8 tracking-wider text-slate-600">
+                Support Center</h1>
 
             <h2 className="text-2xl">Cant find your solution below? </h2>
-            <p className="text-sm light">Request a ticket and we&apos;ll  get back to you</p>
+
+            <p className="text-[0.99rem] light italic">
+                Request a ticket and we&apos;ll  get back to you</p>
+
 
             <form onSubmit={handleSubmit}
-                className="flex justify-center pt-8">
+                className="flex justify-center pt-8 border-b-2 pb-12">
 
 
-                <input className="w-96 p-4 rounded-full rounded-r-none bg-slate-100 text-[1.3rem]"
+                <input className="w-96 p-4 rounded-full rounded-r-none bg-slate-100 text-[1.3rem] border-b-8"
                     type="search"
                     value={searchValue}
                     onChange={handleChangeSearch}
@@ -45,14 +49,15 @@ const Support = () => {
                     placeholder="What issue are you having?"
                 />
 
-                <button className="bg-slate-100 pr-4 rounded-r-full text-2xl">
+                <button className="bg-slate-100 pr-4 rounded-r-full text-2xl border-b-8">
                     <BsSearch />
                 </button>
 
             </form>
 
-            <h2 className="pt-20 text-3xl">Common questions</h2>
-            <div className="flex flex-col items-center place-items-center items-start pb-12 gap-y-8 sm:grid md:grid-cols-3 pt-20 2xl:px-80">
+
+            <h2 className="pt-8 text-3xl bg-slate-200">Common questions</h2>
+            <div className="flex flex-col items-center place-items-center items-start gap-y-8 bg-slate-200 sm:grid md:grid-cols-3 pt-12 pb-20 2xl:px-80">
                 {SupportData.map(({ title, body, id }) => {
                     return <Fragment key={id}>
                         <SupportTab title={title} body={body} />

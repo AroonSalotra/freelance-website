@@ -18,7 +18,7 @@ const SupportTab = ({ title, body }: TProps) => {
 
 
             <button onClick={() => setShowSupportTab(!showSupportTab)}
-                className="flex justify-between bg-slate-100 py-4">
+                className="flex justify-between py-4 shadow-md hover:shadow-lg bg-white">
 
                 <p className="w-screen pl-4 text-left sm:w-[16.5rem] text-[18px] font-thin">{title}</p>
 
@@ -28,7 +28,7 @@ const SupportTab = ({ title, body }: TProps) => {
             </button>
 
 
-            <p className={`w-fit px-6 text-left bg-slate-100 transition-opacity font-light
+            <p className={`w-fit px-6 text-left transition-opacity font-light bg-gray-50
             ${showSupportTab ? "md:opacity-1" : "md:opacity-0"}`}>
                 {body}
             </p>

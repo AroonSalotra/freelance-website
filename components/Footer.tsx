@@ -12,7 +12,7 @@ const Footer = () => {
     ]
 
     return (
-        <footer className="bg-slate-800 text-white mt-20 py-4">
+        <footer className="bg-slate-800 text-white py-4">
             <i>This is a mock website for demonstrating my programming ability</i>
             <ul className="flex justify-center gap-20">
                 {footerList.map(({ body, redirect }) => {
