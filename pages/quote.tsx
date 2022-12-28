@@ -39,7 +39,7 @@ const Quote = () => {
     }
 
     return (
-        <div className="h-full">
+        <div className="h-full pt-12">
             <h1 className="text-5xl title-2 tracking-wider py-3 mb-4 px-2 w-fit mx-auto rounded-lg">
                 Get a quote</h1>
             {/* Hide form when user submits */}

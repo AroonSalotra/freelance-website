@@ -24,13 +24,13 @@ const Support = () => {
     }
 
     return (
-        <div>
-
+        <div className="pt-12">
 
             <h1 className="text-5xl font-semibold py-8 title-2">
                 Support Center</h1>
 
-            <h2 className="text-2xl">Cant find your solution below? </h2>
+            <h2 className="text-2xl">
+                Cant find your solution below? </h2>
 
             <p className="text-[0.99rem] light italic">
                 Request a ticket and we&apos;ll  get back to you</p>
@@ -38,7 +38,6 @@ const Support = () => {
 
             <form onSubmit={handleSubmit}
                 className="flex justify-center pt-8 border-b-2 pb-12">
-
 
                 <input className="w-96 p-4 rounded-full rounded-r-none bg-slate-100 text-[1.3rem] border-b-8"
                     type="search"
