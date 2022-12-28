@@ -21,13 +21,14 @@ export default function Home() {
   const { ref: refQuote, inView: observerBtn } = useInView({ triggerOnce: false })
   const { ref: refWork, inView: observerWork } = useInView({ triggerOnce: false })
   const { ref: refPrice, inView: observerPrice } = useInView({ triggerOnce: false })
+  const scrollRef = useRef<HTMLInputElement>(null)
 
-  const handleClick = () => {
-    // return refWork.current?.scrollIntoView()
-  }
+  const handleClickScroll = () => {
+    const {current} = scrollRef
 
-  const handleSubmit = (e: React.FormEvent) => {
-    return e.preventDefault()
+    if (current !== null) {
+      return current.scrollIntoView()
+    }
   }
 
   useEffect(() => {
@@ -43,11 +44,8 @@ export default function Home() {
   }, [index])
 
 
-
   return (
     <>
-
-
       <section className="pt-60 home border-b-8">
 
         <h1 className="text-8xl w-fit mx-auto rounded-md bg-white">Design</h1>
@@ -68,7 +66,7 @@ export default function Home() {
 
         </div>
 
-        <button onClick={handleClick}
+        <button onClick={handleClickScroll}
           className="text-6xl py-20 hover:text-cyan-700">
           <BsArrowDownCircle />
         </button>
@@ -133,8 +131,6 @@ export default function Home() {
 
       </section>
 
-
-
       <section className="animate-stretch py-20">
         <h2 className="text-5xl title">Grow your business today</h2>
         <dl className="flex flex-col sm:flex-row justify-center gap-4 items-center pt-12">
@@ -156,11 +152,12 @@ export default function Home() {
         </dl>
       </section>
 
-      <section id="pricing" className="pt-12">
+      <section id="pricing" className="pt-12" ref={scrollRef}>
 
         <h2 className="title text-5xl">Pricing</h2>
 
-        <table className="table-mobile sm:m-auto sm:justify-center text-left pt-20" ref={refPrice}>
+        <table className="table-mobile sm:m-auto sm:justify-center text-left pt-20"
+          ref={refPrice}>
           <tbody className={`border-4 border-slate-300 transition-all overflow-y-hidden
           ${observerPrice ? "animate-expand" : ""}`} >
             <tr className="pointer-events-none">
@@ -239,8 +236,6 @@ export default function Home() {
         </div>
 
       </section>
-
-
 
     </>
   )
