@@ -17,7 +17,7 @@ const Footer = () => {
             },
             {
                 body: <AiFillLinkedin />,
-                redirect: "#",
+                redirect: "https://www.linkedin.com/in/aroon-salotra-0aa5b6209/",
                 id: "Linkedin"
             }
         ]
