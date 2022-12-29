@@ -68,9 +68,9 @@ export default function Home() {
 
       </section>
 
-      <div className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 md:px-40 md:rounded-full shadow-lg">
+      <div className="flex flex-col lg:flex-row justify-center gap-4 lg:gap-20 bg-slate-100 w-fit mx-auto mt-20 mb-40 p-4 md:px-40 xl:rounded-full shadow-lg">
 
-        <h2 className="text-5xl border-b-4 sm:border-r-4 sm:border-b-0 border-slate-300 title-2 !text-black sm:pr-20">
+        <h2 className="text-4xl border-b-4 lg:border-r-4 lg:border-b-0 border-slate-300 title-2 !text-black sm:pr-20">
           How it works</h2>
         <ol className="pl-4 sm:pl-0 text-left flex flex-col gap-4">
           <li className="text-[1.5rem]">Select one of our available plans</li>
@@ -85,7 +85,7 @@ export default function Home() {
       <section id="work"
         className="max-w-8xl mx-auto" >
 
-        <div className="flex flex-col-reverse items-center justify-center pt-20 lg:flex-row lg:items-start">
+        <div className="flex flex-col-reverse items-center justify-center pt-20 lg:flex-row xl:items-start">
 
           <Image
             src={Work[0].imgUrl}
@@ -94,12 +94,17 @@ export default function Home() {
             alt={`${Work[0].title} example`}
           />
 
-          <dl className="pl-6 pt-4 text-left h-fit xl:w-[66.3rem] sm:border-r-8 bg-slate-100 border-black">
-            <dt className="text-4xl font-semibold title-2 !text-black">What you get</dt>
-            <dd className="pl-6 text-2xl py-4">Vast icon library</dd>
-            <dd className="pl-6 text-2xl py-4">API Integration</dd>
-            <dd className="pl-6 text-2xl py-4">Beautiful animation transitions</dd>
+          <dl className="pl-6 pt-4 text-left h-fit xl:w-[66.3rem] xl:border-r-8 bg-slate-100 border-black w-screen md:w-10/12">
+
+            <dt className="text-4xl text-center xl:text-left font-semibold title-2 !text-black border-b-4 xl:border-0 border-slate-300">
+              What you get
+            </dt>
+            <dd className="pl-0 xl:pl-6 text-2xl py-4">Vast icon library</dd>
+            <dd className="pl-0 xl:pl-6 text-2xl py-4">API Integration</dd>
+            <dd className="pl-0 xl:pl-6 text-2xl py-4">Beautiful animation transitions</dd>
+            
           </dl>
+
         </div>
 
         <div className="flex flex-col justify-center sm:flex-row">
@@ -129,20 +134,21 @@ export default function Home() {
         <h2 className="text-5xl title">Grow your business today</h2>
         <dl className="flex flex-col sm:flex-row justify-center gap-4 items-center pt-12">
 
-          <div className="bg-white rounded-lg p-4 max-w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
-            <dt className="text-[20px]">Unique Design</dt>
+          <div className="bg-white rounded-lg p-4 w-3/4 sm:w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
+            <dt className="text-[20px] font-semibold">Unique Design</dt>
             <dd>Direct communication for your design.</dd>
           </div>
 
-          <div className="bg-white rounded-lg p-4 max-w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
-            <dt className="text-[20px]">Always Online</dt>
+          <div className="bg-white rounded-lg p-4 w-3/4 sm:w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
+            <dt className="text-[20px] font-semibold">Always Online</dt>
             <dd>24/7 email customer support system.</dd>
           </div>
 
-          <div className="bg-white rounded-lg p-4 max-w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
-            <dt className="text-[20px]">No Limits</dt>
+          <div className="bg-white rounded-lg p-4 w-3/4 sm:w-80 text-left bg-slate-200 shadow-sm hover:shadow-black">
+            <dt className="text-[20px] font-semibold">No Limits</dt>
             <dd>From eCommerce to Online Games.</dd>
           </div>
+
         </dl>
       </section>
 
@@ -152,15 +158,17 @@ export default function Home() {
 
         <table className="table-mobile sm:m-auto sm:justify-center text-left pt-20"
           ref={refPrice}>
+
           <tbody className={`border-4 border-slate-300 transition-all overflow-y-hidden
           ${observerPrice ? "animate-expand" : ""}`} >
             <tr className="pointer-events-none">
               <th />
               <th>
-                <div className="flex flex-col items-center">
-                  <h2 className={`font-normal bg-blue-100 p-1 px-2 sm:absolute sm:translate-y-[-2rem]
+                <div className="flex flex-col items-center px-8">
+                  <h2 className={`font-normal bg-slate-200 p-1 px-2 translate-y-[-0.5rem] h-0 sm:absolute sm:translate-y-[-2rem] sm:h-fit text-sm font-bold text-slate-500
                   ${observerPrice ? "animate-fade" : ""}`}>
-                    Most Popular</h2>
+                    Popular
+                  </h2>
                   <h2 className="text-2xl">Beginner</h2>
                   <h2 className="font-normal">£
                     <span className="text-2xl">6 </span>
@@ -168,7 +176,7 @@ export default function Home() {
                 </div>
               </th>
               <th>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center px-8">
                   <h2 className="text-2xl">Advanced</h2>
                   <h2 className="font-normal">£
                     <span className="text-2xl">9 </span>
@@ -176,7 +184,7 @@ export default function Home() {
                 </div>
               </th>
               <th>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center px-8">
                   <h2 className="text-2xl">Professional</h2>
                   <h2 className="font-normal">£
                     <span className="text-2xl">12 </span>
