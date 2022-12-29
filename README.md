@@ -6,3 +6,5 @@
 * Support section
 
 For this project I aimed to create a industry-level product selling website, for this I made sure to include a pricing table with comparisons, animate on scroll effects and a support section for troubleshooting.
+
+Next.JS - TypeScript - Tailwind
