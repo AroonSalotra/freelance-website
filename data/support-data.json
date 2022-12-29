@@ -15,7 +15,7 @@
         "id": "SPRT-LENGTH"
     },
     {
-        "title": "Are your websites accessible friendly??",
+        "title": "Are your websites accessible friendly?",
         "body": "All of our websites are created with mobile & disability accessability in mind, being accessible to all users is a requirement on all of our products.",
         "id": "SPRT-ACCESSIBLE"
     },
@@ -25,8 +25,8 @@
         "id": "SPRT-COMMERCE"
     },
     {
-        "title": "What do you mean by weekly manintenence?",
-        "body": "For our monthly plan subscribers, weekly manintenence consists of updating software to keep up to date as well as optimising performance should it slow for any reason",
+        "title": "What do you mean by weekly maintenance?",
+        "body": "For our monthly plan subscribers, weekly maintenance consists of updating software to keep up to date as well as optimising performance should it slow for any reason",
         "id": "SPRT-PERFORMANCE"
     }
 ]
